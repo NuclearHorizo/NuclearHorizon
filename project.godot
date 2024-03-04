@@ -12,7 +12,10 @@ config_version=5
 
 config/name="NuclearHorizon"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
+
+[dotnet]
+
+project/assembly_name="NuclearHorizon"
 
 [rendering]
 
