@@ -1,3 +1,5 @@
+AnimationTree
+WorldEnvironment
 Camera3D
 CollisionShape3D
 MeshInstance3D

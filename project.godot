@@ -13,6 +13,9 @@ config_version=5
 config/name="NuclearHorizon"
 run/main_scene="res://Escenas/tuto.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
+boot_splash/image="res://Recursos/Rec. juego/April-Tweets-71-1024x576.png"
+boot_splash/use_filter=false
+config/icon="res://Recursos/Rec. juego/images.jpeg"
 
 [dotnet]
 
@@ -37,5 +40,6 @@ ui_right={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
