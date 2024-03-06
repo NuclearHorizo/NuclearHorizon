@@ -1,28 +1,17 @@
-[gd_scene load_steps=11 format=3 uid="uid://dkkyfewkvd0ft"]
+[gd_scene load_steps=9 format=3 uid="uid://dkkyfewkvd0ft"]
 
 [ext_resource type="PackedScene" uid="uid://bg2ufmmb0wokf" path="res://goku.tscn" id="1_2gfht"]
-[ext_resource type="Texture2D" uid="uid://duq17s1xhg02f" path="res://Recursos/Rec. juego/cielo nuque.jpeg" id="2_t3b3n"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2nooe"]
-albedo_color = Color(1, 1, 0.580392, 1)
-metallic = 0.91
-metallic_specular = 0.0
-roughness = 0.0
-
-[sub_resource type="BoxMesh" id="BoxMesh_qe5tj"]
-material = SubResource("StandardMaterial3D_2nooe")
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_8k577"]
-size = Vector3(7.2511, 0.672333, 3.37744)
+[ext_resource type="ArrayMesh" uid="uid://d0436gboq8pkc" path="res://Recursos/Escenarios/Mundo_Principal.obj" id="1_fwutn"]
+[ext_resource type="Texture2D" uid="uid://bqmfubmdyrjqf" path="res://Recursos/Rec. juego/satara_night_no_lamps_2k.exr" id="3_ybcmd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0h38e"]
-size = Vector3(0.549805, 4.21179, 4.45773)
+size = Vector3(0.549805, 4.21179, 7.94585)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_li6jt"]
-size = Vector3(11.8175, 0.717285, 5.37744)
+[sub_resource type="BoxShape3D" id="BoxShape3D_8k577"]
+size = Vector3(24.2282, 0.672333, 7.61975)
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_ai2l4"]
-panorama = ExtResource("2_t3b3n")
+panorama = ExtResource("3_ybcmd")
 
 [sub_resource type="Sky" id="Sky_fiwul"]
 sky_material = SubResource("PanoramaSkyMaterial_ai2l4")
@@ -35,48 +24,99 @@ sky = SubResource("Sky_fiwul")
 
 [node name="Tuto" type="Node3D"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(7.32355, 0, 0, 0, 0.498711, 0, 0, 0, 3.72399, 0, -0.0731745, -0.789682)
-mesh = SubResource("BoxMesh_qe5tj")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.343217, 0.422728, -0.838751, 0.017179, 0.895671, 0.444386, 0.939099, 0.138112, -0.314672, -17.3643, 20.8371, -63.9381)
-light_energy = 2.38
-
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
+[node name="Pared izq" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.35126, 1.62675, -0.96073)
+shape = SubResource("BoxShape3D_0h38e")
+
 [node name="suelo" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0111694, -0.163834, -0.774621)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.38811, 0.153453, -0.776269)
 shape = SubResource("BoxShape3D_8k577")
 
-[node name="Pared izq" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.85914, 1.62675, -0.450747)
-shape = SubResource("BoxShape3D_0h38e")
-
 [node name="Pared der" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.84321, 1.63806, -0.454841)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.0633, 1.63806, -0.454841)
 shape = SubResource("BoxShape3D_0h38e")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.397774, -0.141357, -5.18135)
-shape = SubResource("BoxShape3D_li6jt")
+[node name="MundoPrincipal" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -3.56831, 0.382776, -1.0845)
+mesh = ExtResource("1_fwutn")
+skeleton = NodePath("../..")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="StaticBody3D"]
+transform = Transform3D(1, -1.58396e-13, 1.03984e-13, -9.27994e-14, 0.0690422, 0.997614, -1.65198e-13, -0.997614, 0.0690421, 7.85935, 1.5172, -1.99945)
+light_color = Color(0.729412, 0.709804, 0.141176, 1)
+light_energy = 4.202
+spot_range = 3.68449
+spot_angle = 74.09
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="StaticBody3D"]
+transform = Transform3D(1, -1.58396e-13, 1.03984e-13, -9.27995e-14, 0.0690422, 0.997614, -1.65198e-13, -0.997614, 0.0690421, 7.53795, 1.85579, 0.452913)
+light_color = Color(0.623529, 0.705882, 0.705882, 1)
+light_energy = 3.586
+distance_fade_enabled = true
+spot_range = 3.68449
+spot_angle = 74.09
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="StaticBody3D"]
+transform = Transform3D(1, -1.58396e-13, 1.03983e-13, -9.27994e-14, 0.0690422, 0.997614, -1.65198e-13, -0.997614, 0.0690421, 2.40689, 1.5172, -1.99945)
+light_color = Color(0.729412, 0.709804, 0.141176, 1)
+light_energy = 4.16
+shadow_reverse_cull_face = true
+distance_fade_begin = 0.0
+distance_fade_length = 5.65
+spot_range = 3.68449
+spot_angle = 74.09
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="StaticBody3D"]
+transform = Transform3D(1, -1.58396e-13, 1.03984e-13, -9.27994e-14, 0.0690422, 0.997614, -1.65198e-13, -0.997614, 0.0690421, -2.00879, 1.5172, -1.99945)
+light_color = Color(0.729412, 0.709804, 0.141176, 1)
+light_energy = 4.0
+distance_fade_begin = 0.0
+distance_fade_length = 5.0
+spot_range = 3.68449
+spot_angle = 74.09
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="StaticBody3D"]
+transform = Transform3D(1, -1.58396e-13, 1.03984e-13, -9.27994e-14, 0.0690422, 0.997614, -1.65198e-13, -0.997614, 0.0690421, -5.69336, 1.5172, -1.99945)
+light_color = Color(0.729412, 0.709804, 0.141176, 1)
+light_energy = 4.0
+spot_range = 3.68449
+spot_angle = 74.09
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="StaticBody3D"]
+transform = Transform3D(1, -1.58396e-13, 1.03984e-13, -9.27994e-14, 0.0690422, 0.997614, -1.65198e-13, -0.997614, 0.0690421, -9.57052, 1.5172, -1.99945)
+light_color = Color(0.729412, 0.709804, 0.141176, 1)
+light_energy = 4.0
+spot_range = 3.68449
+spot_angle = 74.09
+
+[node name="OXXO light" type="SpotLight3D" parent="StaticBody3D"]
+transform = Transform3D(1, -1.58396e-13, 1.03984e-13, 8.91472e-14, 0.877565, 0.479458, -1.67197e-13, -0.479458, 0.877565, 3.60612, 2.70444, 0.570725)
+light_color = Color(1, 0.560784, 1, 1)
+light_energy = 10.844
+light_volumetric_fog_energy = 13.444
+spot_range = 3.68449
+spot_angle = 74.09
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="StaticBody3D"]
+transform = Transform3D(1, -1.58396e-13, 1.03984e-13, -9.27994e-14, 0.0690422, 0.997614, -1.65198e-13, -0.997614, 0.0690421, -14.9578, 1.5172, -1.99945)
+light_color = Color(0.729412, 0.709804, 0.141176, 1)
+light_energy = 4.0
+spot_range = 3.68449
+spot_angle = 74.09
 
 [node name="Goku" parent="." instance=ExtResource("1_2gfht")]
-transform = Transform3D(-1.5, 0, 2.26494e-07, 0, 1.5, 0, -2.26494e-07, 0, -1.5, 2.28894, 0.727298, -2.00095)
+transform = Transform3D(-1.5, 0, 2.26494e-07, 0, 1.5, 0, -2.26494e-07, 0, -1.5, 2.28894, 0.727298, -1.48298)
 
 [node name="Camera3D" type="Camera3D" parent="Goku"]
 transform = Transform3D(0.666667, 1.65818e-05, 0.000197233, -2.65323e-05, 0.665814, 0.0337054, -0.000196142, -0.0337054, 0.665814, 0.379787, 0.207035, 1.47827)
 current = true
 fov = 68.2
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Goku"]
-transform = Transform3D(-1, 1.26227e-07, -8.28648e-08, 0, 0.548789, 0.835961, 1.50996e-07, 0.835961, -0.548789, 0.737442, 2.96992, -2.23734)
-light_color = Color(0.729412, 0.709804, 0.141176, 1)
-light_energy = 16.0
-spot_range = 8.886
-spot_attenuation = 0.258816
-spot_angle = 55.91
-spot_angle_attenuation = 0.406126
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_waq02")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(3.28428, 0, 0, 0, 2.47889, 0, 0, 0, 1, 3.59915, 2.33124, 0.800144)
+text = "OXXO"

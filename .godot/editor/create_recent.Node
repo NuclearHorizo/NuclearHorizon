@@ -1,8 +1,11 @@
+Label3D
+Label
+MeshInstance3D
+GPUParticles3D
 AnimationTree
 WorldEnvironment
 Camera3D
 CollisionShape3D
-MeshInstance3D
 Node3D
 Node
 RigidBody3D

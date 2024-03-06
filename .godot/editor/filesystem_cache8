@@ -1,15 +1,18 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1709598792
-goku.tscn::PackedScene::2864515862603342833::1709598792::0::1::::<><>::uid://qqugsev7c35l::::res://Recursos/Sprites/Prota/Charactert.png
-::res://Escenas/::1709598792
-tuto.tscn::PackedScene::7883260646357806409::1709598792::0::1::::<><>::uid://bg2ufmmb0wokf::::res://goku.tscn
-::res://Recursos/::1709590375
-::res://Recursos/Escenarios/::1709515318
+::res://::1709700277
+goku.tscn::PackedScene::2864515862603342833::1709604707::0::1::::<><>::uid://qqugsev7c35l::::res://Recursos/Sprites/Prota/Charactert.png
+::res://Escenas/::1709605918
+tuto.tscn::PackedScene::7883260646357806409::1709605918::0::1::::<><>::uid://bg2ufmmb0wokf::::res://goku.tscn<>uid://d0436gboq8pkc::::res://Recursos/Escenarios/Mundo_Principal.obj<>uid://bqmfubmdyrjqf::::res://Recursos/Rec. juego/satara_night_no_lamps_2k.exr
+::res://Recursos/::1709604957
+::res://Recursos/Escenarios/::1709603015
+Mundo_Principal.obj::Mesh::8975605849650056346::1709603013::1709603015::1::::<><>::
 ::res://Recursos/Fuentes de texto/::1709515339
-::res://Recursos/Rec. juego/::1709598885
-April-Tweets-71-1024x576.png::CompressedTexture2D::6746653299144295671::1709590385::1709590386::1::::<><>::
+::res://Recursos/Rec. juego/::1709692859
+April-Tweets-71-1024x576.png::CompressedTexture2D::6746653299144295671::1709590385::1709602370::1::::<><>::
 cielo nuque.jpeg::CompressedTexture2D::8597705741761644159::1709598885::1709598893::1::::<><>::
-images.jpeg::CompressedTexture2D::8845306050250328813::1709590381::1709590381::1::::<><>::
+descarga.jpeg::CompressedTexture2D::5800258965728854347::1709603733::1709603745::1::::<><>::
+images.jpeg::CompressedTexture2D::8845306050250328813::1709590381::1709602389::1::::<><>::
+satara_night_no_lamps_2k.exr::CompressedTexture2D::3534554087022327345::1709604952::1709604967::1::::<><>::
 ::res://Recursos/Sonidos/::1709515265
 ::res://Recursos/Sonidos/Musica/::1709515265
 ::res://Recursos/Sonidos/SFX/::1709515262
