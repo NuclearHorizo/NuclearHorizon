@@ -1,11 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1709700277
-goku.tscn::PackedScene::2864515862603342833::1709604707::0::1::::<><>::uid://qqugsev7c35l::::res://Recursos/Sprites/Prota/Charactert.png
-::res://Escenas/::1709605918
-tuto.tscn::PackedScene::7883260646357806409::1709605918::0::1::::<><>::uid://bg2ufmmb0wokf::::res://goku.tscn<>uid://d0436gboq8pkc::::res://Recursos/Escenarios/Mundo_Principal.obj<>uid://bqmfubmdyrjqf::::res://Recursos/Rec. juego/satara_night_no_lamps_2k.exr
+::res://::1710300399
+dbfz_gogeta_ssb.tscn::PackedScene::2561954544295071386::1710297488::0::1::::<><>::uid://d1rboiocdsox6::::res://Recursos/Sprites/DBFZ_GogetaSSB/DBFZ_GogetaSSB.dae<>uid://g2lu6y5gxpyk::::res://Recursos/Sprites/Misc/6w8tq6.png
+::res://Escenas/::1710300399
+gogeta.tscn::PackedScene::1239400980644597571::1710300399::0::1::::<><>::uid://ck7udg8mvl2ts::::res://Recursos/Sprites/xd/Gogeta.fbx<>res://Scripts/ash.gd<>uid://g2lu6y5gxpyk::::res://Recursos/Sprites/Misc/6w8tq6.png
+goku.tscn::PackedScene::2864515862603342833::1710300081::0::1::::<><>::uid://qqugsev7c35l::::res://Recursos/Sprites/Prota/Charactert.png
+tuto.gd::GDScript::-1::1710299954::0::1::::<>Node3D<>::
+tuto.tscn::PackedScene::7883260646357806409::1710300081::0::1::::<><>::uid://bg2ufmmb0wokf::::res://Escenas/goku.tscn<>res://Escenas/tuto.gd<>uid://d0436gboq8pkc::::res://Recursos/Escenarios/Mundo_Principal.obj<>uid://bqmfubmdyrjqf::::res://Recursos/Rec. juego/satara_night_no_lamps_2k.exr<>uid://bjmi1ppcr5qkk::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link.fbx<>uid://c2kwux0h12sqd::::res://Recursos/Sprites/Misc/Flecha xd.png<>uid://rwm0us033wud::::res://Escenas/gogeta.tscn<>uid://dy58dmsmvd40q::::res://Recursos/Sonidos/Musica/Audio de WhatsApp 2024-03-12 a las 19.28.36_1852d570.mp3
 ::res://Recursos/::1709604957
-::res://Recursos/Escenarios/::1709603015
-Mundo_Principal.obj::Mesh::8975605849650056346::1709603013::1709603015::1::::<><>::
+::res://Recursos/Escenarios/::1710131967
+Mundo_Principal.obj::Mesh::8975605849650056346::1709603013::1710131967::1::::<><>::
 ::res://Recursos/Fuentes de texto/::1709515339
 ::res://Recursos/Rec. juego/::1709692859
 April-Tweets-71-1024x576.png::CompressedTexture2D::6746653299144295671::1709590385::1709602370::1::::<><>::
@@ -14,11 +17,109 @@ descarga.jpeg::CompressedTexture2D::5800258965728854347::1709603733::1709603745:
 images.jpeg::CompressedTexture2D::8845306050250328813::1709590381::1709602389::1::::<><>::
 satara_night_no_lamps_2k.exr::CompressedTexture2D::3534554087022327345::1709604952::1709604967::1::::<><>::
 ::res://Recursos/Sonidos/::1709515265
-::res://Recursos/Sonidos/Musica/::1709515265
+::res://Recursos/Sonidos/Musica/::1710299165
+Audio de WhatsApp 2024-03-12 a las 19.28.36_1852d570.mp3::AudioStreamMP3::8907735307817003326::1710296918::1710297485::1::::<><>::
 ::res://Recursos/Sonidos/SFX/::1709515262
-::res://Recursos/Sprites/::1709515310
+::res://Recursos/Sprites/::1710299156
+::res://Recursos/Sprites/DBFZ_GogetaSSB/::1710294322
+DBFZ_GogetaSSB.dae::PackedScene::9019352567504263653::1710294320::1710294322::1::::<><>::uid://crqceigwhvfkr::::res://Recursos/Sprites/DBFZ_GogetaSSB/NHY_avt_base.png
+NHY_avt_base.png::CompressedTexture2D::5999210760924254417::1710294320::1710294322::1::::<><>::
+::res://Recursos/Sprites/DBFZ_GogetaSSB/Color02/::1710294321
+NHY_avt_base.png::CompressedTexture2D::2176802450327218784::1710294320::1710294321::1::::<><>::
+::res://Recursos/Sprites/DBFZ_GogetaSSB/Color03/::1710294321
+NHY_avt_base.png::CompressedTexture2D::391500006887635605::1710294320::1710294321::1::::<><>::
+::res://Recursos/Sprites/DBFZ_GogetaSSB/Color04/::1710294321
+NHY_avt_base.png::CompressedTexture2D::5925393704630580348::1710294320::1710294321::1::::<><>::
+::res://Recursos/Sprites/DBFZ_GogetaSSB/Color05/::1710294321
+NHY_avt_base.png::CompressedTexture2D::7430624801620978651::1710294320::1710294321::1::::<><>::
+::res://Recursos/Sprites/DBFZ_GogetaSSB/Color06/::1710294321
+NHY_avt_base.png::CompressedTexture2D::3204830740877036229::1710294320::1710294321::1::::<><>::
+::res://Recursos/Sprites/DBFZ_GogetaSSB/Color07/::1710294321
+NHY_avt_base.png::CompressedTexture2D::8022436580983555546::1710294320::1710294321::1::::<><>::
+::res://Recursos/Sprites/DBFZ_GogetaSSB/Color08/::1710294321
+NHY_avt_base.png::CompressedTexture2D::2694819025522552169::1710294320::1710294321::1::::<><>::
+::res://Recursos/Sprites/DBFZ_GogetaSSB/Color09/::1710294321
+NHY_avt_base.png::CompressedTexture2D::7533099316505532970::1710294320::1710294321::1::::<><>::
+::res://Recursos/Sprites/DBFZ_GogetaSSB/Color10/::1710294321
+NHY_avt_base.png::CompressedTexture2D::1997990522651983287::1710294320::1710294321::1::::<><>::
+::res://Recursos/Sprites/DBFZ_GogetaSSB/Color11/::1710294321
+NHY_avt_base.png::CompressedTexture2D::2249606782701345522::1710294320::1710294321::1::::<><>::
+::res://Recursos/Sprites/DBFZ_GogetaSSB/Color12/::1710294321
+NHY_avt_base.png::CompressedTexture2D::5372855229634980465::1710294320::1710294321::1::::<><>::
 ::res://Recursos/Sprites/Enemigo/::1709515304
-::res://Recursos/Sprites/Misc/::1709515310
-::res://Recursos/Sprites/Prota/::1709515852
-Charactert.png::CompressedTexture2D::1157277549488772135::1709515556::1709515852::1::::<><>::
-::res://Scripts/::1709515228
+::res://Recursos/Sprites/Misc/::1710295679
+6w8tq6.png::CompressedTexture2D::477576530657500622::1710295676::1710295679::1::::<><>::
+Flecha xd.png::CompressedTexture2D::6689956659883673347::1710293821::1710293822::1::::<><>::
+::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/::1710295514
+0600D0B8.png::CompressedTexture2D::3361141367721601501::1710131466::1710131472::1::::<><>::
+0600D2B8.png::CompressedTexture2D::3618164649820003604::1710131466::1710131472::1::::<><>::
+0600D538.png::CompressedTexture2D::5925360982115697003::1710131466::1710131472::1::::<><>::
+0600D738.png::CompressedTexture2D::4718962329241192546::1710131466::1710131472::1::::<><>::
+0600DC38.png::CompressedTexture2D::2221493881555119162::1710131466::1710131472::1::::<><>::
+0600E438.png::CompressedTexture2D::2889927406882286385::1710131466::1710131472::1::::<><>::
+0600E838.png::CompressedTexture2D::3048955197617967170::1710131466::1710131472::1::::<><>::
+04001A40.png::CompressedTexture2D::854447997269879315::1710131465::1710131472::1::::<><>::
+04001C40 (Edited).png::CompressedTexture2D::6699272954524486935::1710131465::1710131466::1::::<><>::
+04001C40.png::CompressedTexture2D::670748936565851110::1710131465::1710131472::1::::<><>::
+04001D40 (Edited).png::CompressedTexture2D::6303673796841631038::1710131465::1710131466::1::::<><>::
+04001D40.png::CompressedTexture2D::1835083833161589338::1710131465::1710131472::1::::<><>::
+04001F40 (Edited).png::CompressedTexture2D::5540283800872494407::1710131465::1710131466::1::::<><>::
+04001F40.png::CompressedTexture2D::1039533448046213664::1710131465::1710131472::1::::<><>::
+06006F00.png::CompressedTexture2D::8046873477509989458::1710131466::1710131472::1::::<><>::
+06006F80.png::CompressedTexture2D::7043568507338649785::1710131466::1710131472::1::::<><>::
+06007F80.png::CompressedTexture2D::1630781245078592858::1710131466::1710131472::1::::<><>::
+06005000.png::CompressedTexture2D::3927489746164208228::1710131465::1710131472::1::::<><>::
+06005100.png::CompressedTexture2D::3221906804182692658::1710131465::1710131472::1::::<><>::
+06005200.png::CompressedTexture2D::1692246441503122380::1710131465::1710131472::1::::<><>::
+06006000.png::CompressedTexture2D::1558726622364479293::1710131466::1710131472::1::::<><>::
+06006100.png::CompressedTexture2D::2287734696986618760::1710131466::1710131472::1::::<><>::
+06006300.png::CompressedTexture2D::3874052145148119966::1710131466::1710131472::1::::<><>::
+06006500.png::CompressedTexture2D::2697570824055712384::1710131466::1710131472::1::::<><>::
+06006700 (Edited).png::CompressedTexture2D::780279311220473961::1710131466::1710131466::1::::<><>::
+06006700.png::CompressedTexture2D::3227309464246619274::1710131466::1710131472::1::::<><>::
+06007180.png::CompressedTexture2D::1833205937111085618::1710131466::1710131472::1::::<><>::
+06007980.png::CompressedTexture2D::1071835635071834453::1710131466::1710131472::1::::<><>::
+06009380.png::CompressedTexture2D::4847307144577269494::1710131466::1710131472::1::::<><>::
+06009580 (Edited).png::CompressedTexture2D::6786145000283426584::1710131466::1710295514::1::::<><>::
+06009580.png::CompressedTexture2D::170182203409064610::1710131466::1710131472::1::::<><>::
+08000000.png::CompressedTexture2D::7445670988397239075::1710131466::1710131472::1::::<><>::
+09000000.png::CompressedTexture2D::4241502226355211613::1710131466::1710131472::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_0600D0B8.png::CompressedTexture2D::9195963749825182122::1710131468::1710131471::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_0600D2B8.png::CompressedTexture2D::7525719676187828403::1710131468::1710131471::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_0600D538.png::CompressedTexture2D::7409981997569210647::1710131467::1710131472::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_0600D738.png::CompressedTexture2D::7812308936176990241::1710131468::1710131471::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_0600DC38.png::CompressedTexture2D::6813730104050680899::1710131468::1710131471::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_0600E438.png::CompressedTexture2D::4895913134923922442::1710131468::1710131471::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_0600E838.png::CompressedTexture2D::8681765371596282889::1710131468::1710131471::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_04001A40.png::CompressedTexture2D::6592396105683582220::1710131468::1710131471::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_04001C40.png::CompressedTexture2D::5250612492937942404::1710131468::1710131471::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_04001D40.png::CompressedTexture2D::5729608552768953582::1710131467::1710131472::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_04001F40.png::CompressedTexture2D::5859610445313350854::1710131468::1710131471::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06006F00.png::CompressedTexture2D::1502262031562098953::1710131467::1710131472::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06006F80.png::CompressedTexture2D::5321117631559492994::1710131468::1710131471::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06007F80.png::CompressedTexture2D::5320546894483784528::1710131467::1710131472::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06005000.png::CompressedTexture2D::8245371680127624457::1710131467::1710131472::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06005100.png::CompressedTexture2D::4737725218384597190::1710131467::1710131472::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06005200.png::CompressedTexture2D::7963547897150357861::1710131468::1710131471::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06006000.png::CompressedTexture2D::2371701376154616893::1710131468::1710131471::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06006100.png::CompressedTexture2D::9022883056372950810::1710131467::1710131472::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06006300.png::CompressedTexture2D::4046804576275141569::1710131467::1710131472::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06006500.png::CompressedTexture2D::8043814097430749527::1710131467::1710131472::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06006700.png::CompressedTexture2D::339387273186288617::1710131467::1710131472::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06007180.png::CompressedTexture2D::4622807508826323550::1710131468::1710131471::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06007980.png::CompressedTexture2D::2242596871042815307::1710131468::1710131471::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06009380.png::CompressedTexture2D::4228844516550456629::1710131467::1710131472::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06009580.png::CompressedTexture2D::5524297962496633305::1710131468::1710131471::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_08000000.png::CompressedTexture2D::6454941037036240600::1710131468::1710131471::1::::<><>::
+Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_09000000.png::CompressedTexture2D::1381754341097713668::1710131468::1710131471::1::::<><>::
+Adult Link.dae::PackedScene::6051480270438989763::1710131466::1710131467::1::::<><>::uid://1e6tenlpv62q::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/04001D40.png<>uid://xh7y1sttx46a::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/06007F80.png<>uid://beoyukslhaxka::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/06006500.png<>uid://bvgvcqgj8p8he::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/06006300.png<>uid://7ugwkt7ulce7::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/06006100.png<>uid://dmv73icovprhy::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/06006F00.png<>uid://cbcco8gi6k031::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/06009380.png<>uid://bl5ylmq3pt7bi::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/06005100.png<>uid://bv7rgg0l6p773::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/06005000.png<>uid://bl8lkys6mho1g::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/06006700.png<>uid://cqoj3hdlbxi8b::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/0600D538.png<>uid://brswv4q3vdls3::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/0600D2B8.png<>uid://pjg8gu8r2lqb::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/06007980.png<>uid://whb88xxiyni0::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/06006000.png<>uid://c7l7sreylp0mv::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/06006F80.png<>uid://6wdxdxsww427::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/0600DC38.png<>uid://b8h5vc37dlhuw::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/0600D738.png<>uid://bjo631yuwdefq::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/0600E838.png<>uid://js6ewmfpnmq5::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/04001C40.png<>uid://o2s71nrnbp2w::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/04001F40.png<>uid://yd0b0ydo1cqu::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/06005200.png<>uid://coo41xlmtk87::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/06009580.png<>uid://dec0d4bhmtskp::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/08000000.png<>uid://bn5friniop1kj::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/0600D0B8.png<>uid://1eavs30ros7k::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/06007180.png<>uid://mf5vssds11vr::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/04001A40.png<>uid://bhf5xgt6hpw30::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/0600E438.png<>uid://b1ou6l2m3vklx::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/09000000.png
+Adult Link.fbx::PackedScene::3043425787204873758::1710131466::1710131469::1::::<><>::uid://cnvp20assm0f7::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_04001D40.png<>uid://ch2kvoj60awrg::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06007F80.png<>uid://dmuqpccpcnbdf::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06006500.png<>uid://bxwkjr3ccd40d::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06006300.png<>uid://d1s0th6o4368m::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06006100.png<>uid://vnybh25dcsll::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06006F00.png<>uid://b1iqpl0xp467b::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06009380.png<>uid://b8q8v3lk22wks::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06005100.png<>uid://dpqecjl0lkv34::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06005000.png<>uid://e3nwntv4wnn2::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06006700.png<>uid://ddtpk57gio0s6::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_0600D538.png<>uid://dfhrredl4eo8j::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_0600D2B8.png<>uid://67liix0g1ab0::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06007980.png<>uid://814ts452uljp::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06006000.png<>uid://ch2ubav2w4x67::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06006F80.png<>uid://c4cve0bwbf452::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_0600DC38.png<>uid://djklt7lbsqb58::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_0600D738.png<>uid://dvxrn31qxscd2::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_0600E838.png<>uid://cg2o25whtdkbs::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_04001C40.png<>uid://cpqo6sxsj67b3::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_04001F40.png<>uid://dlpup80x6uf2l::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06005200.png<>uid://cx72621y7112k::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_08000000.png<>uid://d4augdnvnd84e::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_0600D0B8.png<>uid://c06n2huxsse4s::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_04001A40.png<>uid://cb0u8d8j2kl1k::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_0600E438.png<>uid://txlj6xr4qgq3::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_09000000.png<>uid://ckyam6wtyxlpx::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06009580.png<>uid://b64k71xwmqmk1::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link-b0332cc7f35d4fd7ea3ca856e103fd52_06007180.png
+::res://Recursos/Sprites/Prota/::1710285461
+Charactert-sheet.png::CompressedTexture2D::1456158011310326481::1710130759::1710130810::1::::<><>::
+Charactert.png::CompressedTexture2D::1157277549488772135::1710285459::1710285461::1::::<><>::
+::res://Recursos/Sprites/xd/::1710300399
+Flair (1)-58075d1b9a2ef803b106bbb549e58fd8_NHY_avt_base.png::CompressedTexture2D::235888156948256188::1710299163::1710299164::1::::<><>::
+Gogeta.fbx::PackedScene::5542009955825881708::1710299140::1710300401::1::::<><>::uid://cy8bjhx5ngf71::::res://Recursos/Sprites/xd/Gogeta-ef57b79aba2f86cc63505e787cc982b9_NHY_avt_base.png
+Gogeta-ef57b79aba2f86cc63505e787cc982b9_NHY_avt_base.png::CompressedTexture2D::6525575274295492846::1710300400::1710300401::1::::<><>::
+::res://Scripts/::1710299954
+ash.gd::GDScript::-1::1710299954::0::1::::<>Node3D<>::

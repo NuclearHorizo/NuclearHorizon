@@ -1,2 +1,6 @@
-res://goku.tscn
 res://Escenas/tuto.tscn
+res://Escenas/goku.tscn
+res://dbfz_gogeta_ssb.tscn
+res://Escenas/gogeta.tscn
+res://Scripts/ash.gd
+res://Escenas/tuto.gd

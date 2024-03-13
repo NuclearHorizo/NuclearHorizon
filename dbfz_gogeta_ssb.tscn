@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://bcrbatxw5hu23"]
+
+[ext_resource type="PackedScene" uid="uid://d1rboiocdsox6" path="res://Recursos/Sprites/DBFZ_GogetaSSB/DBFZ_GogetaSSB.dae" id="1_m887u"]
+[ext_resource type="Texture2D" uid="uid://g2lu6y5gxpyk" path="res://Recursos/Sprites/Misc/6w8tq6.png" id="2_ie4lo"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7p2dw"]
+emission_shape = 2
+emission_sphere_radius = 1.0
+gravity = Vector3(0, 9.8, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xi7nf"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.0117647)
+albedo_texture = ExtResource("2_ie4lo")
+albedo_texture_force_srgb = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_f2lvd"]
+lightmap_size_hint = Vector2i(7, 7)
+material = SubResource("StandardMaterial3D_xi7nf")
+
+[node name="DBFZ_GogetaSSB" instance=ExtResource("1_m887u")]
+transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0, 0, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.025406, 4.94721, 1.34016)
+light_color = Color(0.733333, 1, 1, 1)
+light_indirect_energy = 3.263
+light_volumetric_fog_energy = 5.848
+shadow_enabled = true
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.736047, 0)
+amount = 400
+lifetime = 0.46
+visibility_aabb = AABB(-1.00706, -1.20479, -0.784243, 2.01411, 2.40957, 1.56849)
+process_material = SubResource("ParticleProcessMaterial_7p2dw")
+draw_pass_1 = SubResource("QuadMesh_f2lvd")
+
+[node name="GPUParticlesAttractorBox3D" type="GPUParticlesAttractorBox3D" parent="GPUParticles3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0288196, 1.08711, 0.059673)
