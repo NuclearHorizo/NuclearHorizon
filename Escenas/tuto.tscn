@@ -1,13 +1,14 @@
-[gd_scene load_steps=17 format=3 uid="uid://dkkyfewkvd0ft"]
+[gd_scene load_steps=18 format=3 uid="uid://dkkyfewkvd0ft"]
 
 [ext_resource type="PackedScene" uid="uid://bg2ufmmb0wokf" path="res://Escenas/goku.tscn" id="1_2gfht"]
-[ext_resource type="Script" path="res://Escenas/tuto.gd" id="1_44glq"]
+[ext_resource type="Script" path="res://Scripts/tuto.gd" id="1_44glq"]
 [ext_resource type="ArrayMesh" uid="uid://d0436gboq8pkc" path="res://Recursos/Escenarios/Mundo_Principal.obj" id="1_fwutn"]
 [ext_resource type="Texture2D" uid="uid://bqmfubmdyrjqf" path="res://Recursos/Rec. juego/satara_night_no_lamps_2k.exr" id="3_ybcmd"]
 [ext_resource type="PackedScene" uid="uid://bjmi1ppcr5qkk" path="res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link.fbx" id="4_3jhpl"]
 [ext_resource type="Texture2D" uid="uid://c2kwux0h12sqd" path="res://Recursos/Sprites/Misc/Flecha xd.png" id="5_iabh6"]
 [ext_resource type="PackedScene" uid="uid://rwm0us033wud" path="res://Escenas/gogeta.tscn" id="7_th52y"]
 [ext_resource type="AudioStream" uid="uid://dy58dmsmvd40q" path="res://Recursos/Sonidos/Musica/Audio de WhatsApp 2024-03-12 a las 19.28.36_1852d570.mp3" id="8_hadkf"]
+[ext_resource type="PackedScene" uid="uid://bh00hmwifstki" path="res://Escenas/nose al chile xdddd.tscn" id="9_0xu18"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0h38e"]
 size = Vector3(0.549805, 4.21179, 7.94585)
@@ -98,7 +99,6 @@ spot_angle = 74.09
 transform = Transform3D(1, -1.58397e-13, 1.03984e-13, -9.27995e-14, 0.0690422, 0.997614, -1.65198e-13, -0.997614, 0.0690422, 7.55609, 1.87383, 0.455143)
 light_color = Color(0.623529, 0.705882, 0.705882, 1)
 light_energy = 9.081
-distance_fade_enabled = true
 spot_range = 3.68449
 spot_angle = 74.09
 
@@ -146,11 +146,6 @@ spot_angle = 74.09
 [node name="Goku" parent="." instance=ExtResource("1_2gfht")]
 transform = Transform3D(-1.5, 0, 2.26494e-07, 0, 1.5, 0, -2.26494e-07, 0, -1.5, 2.28894, 0.727298, -1.48298)
 
-[node name="Camera3D" type="Camera3D" parent="Goku"]
-transform = Transform3D(0.666667, 1.65818e-05, 0.000197233, -2.65323e-05, 0.665814, 0.0337054, -0.000196142, -0.0337054, 0.665814, 0.379787, 0.207035, 1.47827)
-current = true
-fov = 68.2
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_waq02")
 
@@ -162,14 +157,9 @@ text = "OXXO"
 transform = Transform3D(0.0607528, 0, -0.0794298, 0, 0.1, 0, 0.0794298, 0, 0.0607528, 4.13458, 0.403076, 0.268174)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.550014, 0, 0.835155, 0.0390063, 0.998909, 0.0256887, -0.834244, 0.0467055, -0.549414, -0.609376, 9.18475, -16.8847)
-light_energy = 0.354
+transform = Transform3D(-0.958099, 0.0300872, 0.284854, 0.0390063, 0.998909, 0.0256886, -0.283771, 0.0357234, -0.958227, -0.609376, 9.18475, -16.8847)
 shadow_enabled = true
-shadow_bias = 0.0
-shadow_normal_bias = 0.0
 shadow_reverse_cull_face = true
-shadow_transmittance_bias = 16.0
-shadow_blur = 9.095
 
 [node name="vainas locas" type="Node3D" parent="."]
 
@@ -200,3 +190,6 @@ attenuation_model = 1
 unit_size = 1.79
 max_db = 0.999
 autoplay = true
+
+[node name="Node3D" parent="." instance=ExtResource("9_0xu18")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.29754, 3.74348, -1.16649)

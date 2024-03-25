@@ -1,6 +1,10 @@
-res://Escenas/tuto.tscn
 res://Escenas/goku.tscn
-res://dbfz_gogeta_ssb.tscn
+res://Recursos/materiales/Cristal.tres
+res://Recursos/materiales/Hojas.tres
+res://Escenas/tuto.tscn
 res://Escenas/gogeta.tscn
-res://Scripts/ash.gd
-res://Escenas/tuto.gd
+res://Escenas/Mundo inicial.tscn
+res://Escenas/Nivel1.tscn
+res://Recursos/materiales/Madera.tres
+res://Recursos/materiales/Metal.tres
+res://Escenas/Lampara.tscn

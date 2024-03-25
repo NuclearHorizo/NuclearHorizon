@@ -1,0 +1,18 @@
+[remap]
+
+importer="MagicaVoxel.With.Extensions.To.Mesh"
+type="Mesh"
+uid="uid://ctwbt40b4r0k4"
+path="res://.godot/imported/Escenario de prueba.vox-f6371fd3274826f6059c5bad24501116.mesh"
+
+[deps]
+
+source_file="res://Recursos/Escenarios/Escenario de prueba.vox"
+dest_files=["res://.godot/imported/Escenario de prueba.vox-f6371fd3274826f6059c5bad24501116.mesh"]
+
+[params]
+
+Scale=0.1
+GreedyMeshGenerator=true
+SnapToGround=false
+FirstKeyframeOnly=true

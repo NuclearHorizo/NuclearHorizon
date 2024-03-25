@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bmn8wp4smr5c"]
+
+[ext_resource type="Texture2D" uid="uid://cj82k01aqlxgs" path="res://Recursos/texturas/pixil-frame-0 (5).png" id="1_ckie7"]
+
+[resource]
+albedo_texture = ExtResource("1_ckie7")
+metallic_specular = 0.0
+uv1_scale = Vector3(5, 5, 5)
+uv1_triplanar = true

@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dyunjlsodh0tm"]
+
+[resource]
+resource_name = "Cristal"
+transparency = 3
+alpha_hash_scale = 1.0
+alpha_antialiasing_mode = 0
+cull_mode = 2
+depth_draw_mode = 2
+specular_mode = 1
+albedo_color = Color(0, 0.756863, 0.760784, 0.180392)
+metallic_specular = 0.0
+roughness = 0.0
+refraction_enabled = true
+refraction_scale = 0.52

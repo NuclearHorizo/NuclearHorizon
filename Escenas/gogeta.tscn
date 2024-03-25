@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://rwm0us033wud"]
+[gd_scene load_steps=10 format=3 uid="uid://rwm0us033wud"]
 
 [ext_resource type="PackedScene" uid="uid://ck7udg8mvl2ts" path="res://Recursos/Sprites/xd/Gogeta.fbx" id="1_s7fb0"]
 [ext_resource type="Script" path="res://Scripts/ash.gd" id="2_l5lmu"]
 [ext_resource type="Texture2D" uid="uid://g2lu6y5gxpyk" path="res://Recursos/Sprites/Misc/6w8tq6.png" id="2_ygonx"]
+[ext_resource type="Texture2D" uid="uid://by0b8v4k7qyl1" path="res://Recursos/Sprites/Misc/3DS - The Legend of Zelda Majoras Mask 3D - Dialogue Boxes.png" id="4_iqgjf"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_76hd4"]
 emission_shape = 2
@@ -17,6 +18,13 @@ albedo_texture = ExtResource("2_ygonx")
 [sub_resource type="QuadMesh" id="QuadMesh_ctyky"]
 material = SubResource("StandardMaterial3D_oeljy")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_mar67"]
+size = Vector3(5.27973, 1.81342, 6.69287)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2xy80"]
+texture = ExtResource("4_iqgjf")
+region_rect = Rect2(-0.662437, 176.277, 256.662, 64.2226)
+
 [node name="gogeta" instance=ExtResource("1_s7fb0")]
 script = ExtResource("2_l5lmu")
 
@@ -24,32 +32,32 @@ script = ExtResource("2_l5lmu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000520468, 0.0348299, -0.0102737)
 
 [node name="Armature" parent="RootNode" index="0"]
-transform = Transform3D(2.52149, -0.164828, 0.257904, -0.303425, -1.06507, 2.28586, -0.0401924, -2.30001, -1.077, 0.0543859, 0.717055, 0.696744)
+transform = Transform3D(2.49143, -0.491346, -0.0543386, 0.180767, 1.16539, -2.24962, 0.460106, 2.20273, 1.17807, 0.182001, 0.174608, -0.998717)
 
 [node name="Skeleton3D" parent="RootNode/Armature" index="0"]
 transform = Transform3D(1, 3.72529e-09, -9.77889e-09, 0, 1, 2.98023e-08, -6.51926e-09, 2.98023e-08, 1, 0, 0, 0)
-bones/3/rotation = Quaternion(-0.383912, 0.318712, 0.469123, 0.728668)
-bones/4/rotation = Quaternion(0.073719, -0.081519, 0.00969351, 0.993894)
-bones/5/rotation = Quaternion(0.327824, 0.00183699, -0.120365, 0.937038)
-bones/7/rotation = Quaternion(-0.329542, -0.22657, -0.451077, 0.797871)
-bones/8/rotation = Quaternion(0.0581234, -0.0888838, -0.0482547, 0.993173)
-bones/9/rotation = Quaternion(-0.0464581, -0.147061, 0.20262, 0.967037)
-bones/11/rotation = Quaternion(0.235797, -0.0486656, -0.00589166, 0.970565)
-bones/12/rotation = Quaternion(0.458189, -0.0870397, -0.00386982, 0.884575)
-bones/13/rotation = Quaternion(0.0282245, 0.000156892, 0.004727, 0.999591)
-bones/14/rotation = Quaternion(0.028224, 0.000156888, 0.00472704, 0.99959)
-bones/15/rotation = Quaternion(0.0282249, 0.000156909, 0.00472696, 0.99959)
-bones/16/rotation = Quaternion(0.0282247, 0.000156898, 0.00472697, 0.99959)
-bones/21/rotation = Quaternion(0.0508547, -0.0242613, -0.00660499, 0.998389)
-bones/22/rotation = Quaternion(0.142789, 0.279996, -0.745269, 0.588037)
-bones/23/rotation = Quaternion(5.0024e-09, -0.295985, -1.06462e-07, 0.955193)
-bones/24/rotation = Quaternion(0.164714, 0.174834, 0.041689, 0.969827)
+bones/3/rotation = Quaternion(-0.361015, 0.0955978, 0.313711, 0.872992)
+bones/4/rotation = Quaternion(0.310338, -0.0334274, 0.0774035, 0.94688)
+bones/5/rotation = Quaternion(0.212925, -0.0979012, -0.0862029, 0.968322)
+bones/7/rotation = Quaternion(-0.413486, -0.136034, -0.366126, 0.822481)
+bones/8/rotation = Quaternion(0.462486, 0.108478, -0.000421714, 0.879965)
+bones/9/rotation = Quaternion(0.0768401, 0.137399, 0.156382, 0.97507)
+bones/11/rotation = Quaternion(0.199967, -0.0272997, 0.0114044, 0.979356)
+bones/12/rotation = Quaternion(0.391702, -0.0526338, 0.0225785, 0.918308)
+bones/13/rotation = Quaternion(-0.0177104, 0.00720368, -0.027365, 0.999443)
+bones/14/rotation = Quaternion(-0.0177103, 0.00720371, -0.027365, 0.999443)
+bones/15/rotation = Quaternion(-0.0177103, 0.00720368, -0.027365, 0.999443)
+bones/16/rotation = Quaternion(-0.0177102, 0.0072037, -0.027365, 0.999443)
+bones/21/rotation = Quaternion(0.320142, -0.29066, -0.0860798, 0.897561)
+bones/22/rotation = Quaternion(-0.683901, -0.35662, -0.0993629, 0.628672)
+bones/23/rotation = Quaternion(-4.09611e-08, -0.512511, 4.14483e-08, 0.85868)
+bones/24/rotation = Quaternion(0.226633, 0.156194, -0.197435, 0.940883)
 bones/26/rotation = Quaternion(1.49618e-07, -3.10507e-08, 0.173648, 0.984808)
 bones/26/scale = Vector3(1, 1, 1)
-bones/28/rotation = Quaternion(0.00494228, -0.000105851, -0.0140925, 0.999888)
-bones/29/rotation = Quaternion(0.120717, -0.243626, 0.690168, 0.670628)
-bones/30/rotation = Quaternion(3.28725e-08, 0.355155, -2.03224e-08, 0.934807)
-bones/31/rotation = Quaternion(0.291695, -0.325691, 0.00992242, 0.899301)
+bones/28/rotation = Quaternion(0.0603568, 0.491636, -0.10909, 0.86183)
+bones/29/rotation = Quaternion(-0.388632, 0.115472, 0.0457843, 0.912981)
+bones/30/rotation = Quaternion(-2.77379e-08, 0.406148, -4.60697e-08, 0.913807)
+bones/31/rotation = Quaternion(-0.175699, -0.0544067, -0.00461394, 0.982929)
 bones/33/rotation = Quaternion(1.76097e-07, 3.10506e-08, -0.173648, 0.984808)
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="." index="2"]
@@ -60,12 +68,59 @@ visibility_aabb = AABB(-1.00706, -1.20479, -0.784243, 2.01411, 2.40957, 1.56849)
 process_material = SubResource("ParticleProcessMaterial_76hd4")
 draw_pass_1 = SubResource("QuadMesh_ctyky")
 
-[node name="GPUParticlesAttractorBox3D" type="GPUParticlesAttractorBox3D" parent="GPUParticles3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0288196, 1.08711, 0.059673)
-
 [node name="SpotLight3D" type="SpotLight3D" parent="." index="3"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.025406, 4.94721, 1.34016)
 light_color = Color(0.733333, 1, 1, 1)
 light_indirect_energy = 3.263
 light_volumetric_fog_energy = 5.848
-shadow_enabled = true
+
+[node name="Area3D" type="Area3D" parent="." index="4"]
+collision_layer = 128
+collision_mask = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.876347, 1.41446, 1.92358)
+shape = SubResource("BoxShape3D_mar67")
+
+[node name="Label3D" type="Label3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.119985, 2.83096, 0)
+visible = false
+text = "Pulsa ENTER para hablar!"
+
+[node name="Panel" type="Panel" parent="." index="6"]
+offset_left = 310.0
+offset_top = 176.0
+offset_right = 875.0
+offset_bottom = 443.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_2xy80")
+
+[node name="Label" type="Label" parent="Panel" index="0"]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 45.0
+offset_right = 463.0
+offset_bottom = 91.0
+theme_override_font_sizes/font_size = 33
+text = "Quieres entrar al nivel?"
+
+[node name="Button" type="Button" parent="Panel" index="1"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 129.0
+offset_right = 243.0
+offset_bottom = 196.0
+theme_override_font_sizes/font_size = 43
+text = "Si"
+
+[node name="Button2" type="Button" parent="Panel" index="2"]
+layout_mode = 0
+offset_left = 297.0
+offset_top = 129.0
+offset_right = 424.0
+offset_bottom = 196.0
+theme_override_font_sizes/font_size = 43
+text = "No"
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]

@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cx34f35824dut"]
+
+[resource]
+metallic_specular = 0.0
+uv1_triplanar = true
+grow_amount = -0.376

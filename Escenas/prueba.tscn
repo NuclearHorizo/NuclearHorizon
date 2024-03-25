@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://cd0veat7yfy73"]
+
+[ext_resource type="Script" path="res://Scripts/prueba.gd" id="1_nmce3"]
+[ext_resource type="PackedScene" uid="uid://dyet5sw4w18wu" path="res://ya_no_xd.tscn" id="2_jk7st"]
+[ext_resource type="PackedScene" uid="uid://bg2ufmmb0wokf" path="res://Escenas/goku.tscn" id="3_dibfk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lg035"]
+size = Vector3(3.36596, 5.20898, 3.44095)
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+script = ExtResource("1_nmce3")
+
+[node name="ya no xd" parent="." instance=ExtResource("2_jk7st")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 0.169762, 0.673937, 1.13997)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.928684, -0.0394069, -0.368773, 0.0775234, 0.993, 0.0891164, 0.36268, -0.11135, 0.925238, -3.22104, 1.95201, 7.61798)
+
+[node name="Goku" parent="." instance=ExtResource("3_dibfk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.61617, 1.46314, 6.39099)
+
+[node name="Camera3D2" type="Camera3D" parent="."]
+transform = Transform3D(0.964884, 0, -0.262677, 0, 1, 0, 0.262677, 0, 0.964884, 3.46122, 1.79649, 7.83146)
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.11267, 0.205996, 4.75781)
+collision_layer = 128
+collision_mask = 128
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.966803, 2.62855, 0.297619)
+shape = SubResource("BoxShape3D_lg035")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

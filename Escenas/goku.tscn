@@ -1,6 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://bg2ufmmb0wokf"]
+[gd_scene load_steps=42 format=3 uid="uid://bg2ufmmb0wokf"]
 
 [ext_resource type="Texture2D" uid="uid://qqugsev7c35l" path="res://Recursos/Sprites/Prota/Charactert.png" id="1_veywt"]
+[ext_resource type="Texture2D" uid="uid://2jurlmy8ob7i" path="res://Recursos/Sprites/Prota/Efectos .png" id="2_ebsw5"]
 
 [sub_resource type="GDScript" id="GDScript_xrcn3"]
 script/source = "extends CharacterBody3D
@@ -9,34 +10,62 @@ script/source = "extends CharacterBody3D
 @export var JUMP_VELOCITY = 4.5
 var dir = Vector2.ZERO
 var state_machine
-
+var agachado = false
 var gravity = ProjectSettings.get_setting(\"physics/3d/default_gravity\")
+var fps
 
 func _ready():
 	$AnimationTree.active = true
 	
-func _anim():
+func pared():
+	if is_on_wall() && velocity.y < 0:
+		gravity = 3
+		if Input.is_action_just_pressed(\"ui_accept\"):
+			velocity.y = JUMP_VELOCITY
+	else:
+		gravity = 9.8
 	
+func _anim():
 	state_machine = $AnimationTree.get(\"parameters/playback\")
-	if Input.is_action_pressed(\"ui_right\"):
+	
+	#Correr
+	if velocity.x < 0:
 		state_machine.travel(\"Correr\")
-		$Sprite3D.flip_h = false
-			
-	elif Input.is_action_pressed(\"ui_left\"):
+		$PJ.flip_h = false
+	elif velocity.x > 0:
 		state_machine.travel(\"Correr\")
-		$Sprite3D.flip_h = true
+		$PJ.flip_h = true
 		
 	else:
 		state_machine.travel(\"Idle\")
-	
-	if is_on_floor() == false:
+	#Salto
+	if not is_on_floor():
 		if velocity.y < 0:
 			state_machine.travel(\"salto_caer\")
 		else:
 			state_machine.travel(\"Salto\")
+	#Pared
+	if is_on_wall() && velocity.y < 0:
+		state_machine.travel(\"pared_dezlis\")
+		$efectos/AnimationPlayer.play(\"tierrita\")
+		$efectos.show()
+		if Input.is_action_pressed(\"ui_right\"):
+			$PJ.flip_h = true
+			$efectos.flip_v= true
 			
+		if Input.is_action_pressed(\"ui_left\"):
+			$PJ.flip_h = false
+			$efectos.flip_v= false
+	else:
+		$efectos.hide()
+	if Input.is_action_pressed(\"ui_down\") && velocity.x == 0 && velocity.y == 0:
+		state_machine.travel(\"Agacharse_inicio\")
+	
 func _physics_process(delta):
+	pared()
 	_anim()
+	fps = Engine.get_frames_per_second()
+	$Interfaz/CanvasLayer/Fps.text = \"FPS: \"+ str(fps)
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
@@ -48,8 +77,49 @@ func _physics_process(delta):
 	move_and_slide()
 "
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_kkmuu"]
-size = Vector3(0.0849991, 0.293207, 0.103516)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2p20y"]
+radius = 0.0778138
+height = 0.33334
+
+[sub_resource type="Animation" id="Animation_l6fua"]
+resource_name = "Agacharse_inicio"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PJ:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0265296, 0.0576843, 0.0907522, 0.124878, 0.162264),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [34, 35, 36, 37, 38, 39]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Goku:shape:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(-0.00048437, 0),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.0849991, 0.227536, 0.103516), Vector3(0.0849991, 0.227536, 0.103516)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Goku:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.00715661, 0.0268178, -0.00208966)]
+}
 
 [sub_resource type="Animation" id="Animation_t78um"]
 resource_name = "Correr"
@@ -58,7 +128,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/path = NodePath("PJ:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -70,28 +140,28 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CollisionShape3D:position")
+tracks/1/path = NodePath("Goku:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0.039309, 0.0491533, -0.00208966)]
+"values": [Vector3(0.00715661, 0.0268178, -0.00208966)]
 }
 
 [sub_resource type="Animation" id="Animation_3kpim"]
 resource_name = "Idle"
-length = 0.8
+length = 1.6
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/path = NodePath("PJ:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3]
@@ -99,14 +169,26 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CollisionShape3D:position")
+tracks/1/path = NodePath("Goku:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0.00715661, 0.0491533, -0.00208966)]
+"values": [Vector3(0.00715661, 0.0268178, -0.00208966)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Goku:shape:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.110371, 0.275023, 0.103516)]
 }
 
 [sub_resource type="Animation" id="Animation_j7sh7"]
@@ -114,7 +196,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/path = NodePath("PJ:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -126,7 +208,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CollisionShape3D:position")
+tracks/1/path = NodePath("Goku:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -135,13 +217,25 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector3(0.039309, 0.0491533, -0.00208966)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Goku:shape:size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.110371, 0.275023, 0.103516)]
+}
 
 [sub_resource type="Animation" id="Animation_rp6g0"]
 resource_name = "Salto"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/path = NodePath("PJ:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -153,14 +247,41 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CollisionShape3D:position")
+tracks/1/path = NodePath("Goku:shape:size")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0.039309, 0.048536, -0.00208966), Vector3(0.039309, 0.145218, -0.00208966)]
+"values": [Vector3(0.110371, 0.275023, 0.103516)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Goku:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.00715661, 0.0491533, -0.00208966)]
+}
+
+[sub_resource type="Animation" id="Animation_ey8je"]
+resource_name = "agachado"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PJ:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [39]
 }
 
 [sub_resource type="Animation" id="Animation_0nl2m"]
@@ -169,7 +290,7 @@ length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/path = NodePath("PJ:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -179,6 +300,47 @@ tracks/0/keys = {
 "values": [25, 26, 27]
 }
 
+[sub_resource type="Animation" id="Animation_7wbhe"]
+resource_name = "pared_dezlis"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PJ:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.140423),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [24, 25]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Goku:shape:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.14063, 0.275023, 0.103516)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Goku:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.0214048, 0.0491533, -0.00208966)]
+}
+
 [sub_resource type="Animation" id="Animation_6y8xx"]
 resource_name = "salto_caer"
 length = 0.2
@@ -186,7 +348,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite3D:frame")
+tracks/0/path = NodePath("PJ:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -198,7 +360,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CollisionShape3D:position")
+tracks/1/path = NodePath("Goku:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -210,13 +372,19 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_onaq2"]
 _data = {
+"Agacharse_inicio": SubResource("Animation_l6fua"),
 "Correr": SubResource("Animation_t78um"),
 "Idle": SubResource("Animation_3kpim"),
 "RESET": SubResource("Animation_j7sh7"),
 "Salto": SubResource("Animation_rp6g0"),
+"agachado": SubResource("Animation_ey8je"),
 "damage": SubResource("Animation_0nl2m"),
+"pared_dezlis": SubResource("Animation_7wbhe"),
 "salto_caer": SubResource("Animation_6y8xx")
 }
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_smfra"]
+animation = &"Agacharse_inicio"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_sg16l"]
 animation = &"Correr"
@@ -226,6 +394,9 @@ animation = &"Idle"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fhvl7"]
 animation = &"Salto"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_liqsa"]
+animation = &"pared_dezlis"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ltbcw"]
 animation = &"salto_caer"
@@ -248,34 +419,167 @@ animation = &"salto_caer"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_6j3gx"]
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rxc36"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_35if7"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qu0ut"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_kb0cm"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mh4gt"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_k1c6x"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3q2ya"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_03kmm"]
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_uw6ge"]
+states/Agacharse_inicio/node = SubResource("AnimationNodeAnimation_smfra")
+states/Agacharse_inicio/position = Vector2(427, 191)
 states/Correr/node = SubResource("AnimationNodeAnimation_sg16l")
 states/Correr/position = Vector2(530, 100)
 states/Idle/node = SubResource("AnimationNodeAnimation_oocto")
 states/Idle/position = Vector2(339, 100)
 states/Salto/node = SubResource("AnimationNodeAnimation_fhvl7")
 states/Salto/position = Vector2(391, 2)
+states/pared_dezlis/node = SubResource("AnimationNodeAnimation_liqsa")
+states/pared_dezlis/position = Vector2(465, -77)
 states/salto_caer/node = SubResource("AnimationNodeAnimation_ltbcw")
 states/salto_caer/position = Vector2(559, 2)
-transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_0dw1g"), "Idle", "Salto", SubResource("AnimationNodeStateMachineTransition_tvrxt"), "Salto", "salto_caer", SubResource("AnimationNodeStateMachineTransition_v5bvk"), "salto_caer", "Correr", SubResource("AnimationNodeStateMachineTransition_ecmbp"), "Correr", "Idle", SubResource("AnimationNodeStateMachineTransition_hfcg8"), "Idle", "Correr", SubResource("AnimationNodeStateMachineTransition_25pg2"), "Salto", "Idle", SubResource("AnimationNodeStateMachineTransition_hom7t"), "salto_caer", "Salto", SubResource("AnimationNodeStateMachineTransition_46kyp"), "Correr", "salto_caer", SubResource("AnimationNodeStateMachineTransition_6j3gx")]
-graph_offset = Vector2(-51, -66)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_0dw1g"), "Idle", "Salto", SubResource("AnimationNodeStateMachineTransition_tvrxt"), "Salto", "salto_caer", SubResource("AnimationNodeStateMachineTransition_v5bvk"), "salto_caer", "Correr", SubResource("AnimationNodeStateMachineTransition_ecmbp"), "Correr", "Idle", SubResource("AnimationNodeStateMachineTransition_hfcg8"), "Idle", "Correr", SubResource("AnimationNodeStateMachineTransition_25pg2"), "Salto", "Idle", SubResource("AnimationNodeStateMachineTransition_hom7t"), "salto_caer", "Salto", SubResource("AnimationNodeStateMachineTransition_46kyp"), "Correr", "salto_caer", SubResource("AnimationNodeStateMachineTransition_6j3gx"), "Salto", "pared_dezlis", SubResource("AnimationNodeStateMachineTransition_rxc36"), "pared_dezlis", "Salto", SubResource("AnimationNodeStateMachineTransition_35if7"), "salto_caer", "pared_dezlis", SubResource("AnimationNodeStateMachineTransition_qu0ut"), "pared_dezlis", "salto_caer", SubResource("AnimationNodeStateMachineTransition_kb0cm"), "Idle", "Agacharse_inicio", SubResource("AnimationNodeStateMachineTransition_mh4gt"), "Agacharse_inicio", "Idle", SubResource("AnimationNodeStateMachineTransition_k1c6x"), "Agacharse_inicio", "Correr", SubResource("AnimationNodeStateMachineTransition_3q2ya"), "Correr", "Agacharse_inicio", SubResource("AnimationNodeStateMachineTransition_03kmm")]
+graph_offset = Vector2(-89, 86)
+
+[sub_resource type="Animation" id="Animation_ept4u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -1.5708)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.62307, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.00831793, 0.119434, 0.0182425)]
+}
+
+[sub_resource type="Animation" id="Animation_4q08m"]
+resource_name = "tierrita"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -1.5708)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.62307, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.084738),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.00831793, 0.119434, 0.0182425)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nb3wo"]
+_data = {
+"RESET": SubResource("Animation_ept4u"),
+"tierrita": SubResource("Animation_4q08m")
+}
 
 [node name="Goku" type="CharacterBody3D"]
+collision_layer = 129
+collision_mask = 129
 script = SubResource("GDScript_xrcn3")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="Goku" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.039309, 0.0491533, -0.00208966)
-shape = SubResource("BoxShape3D_kkmuu")
+shape = SubResource("CapsuleShape3D_2p20y")
 
-[node name="Sprite3D" type="Sprite3D" parent="."]
+[node name="PJ" type="Sprite3D" parent="."]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0.16447, 0)
+cast_shadow = 2
 gi_mode = 2
 gi_lightmap_scale = 1
 shaded = true
 texture_filter = 4
 texture = ExtResource("1_veywt")
 hframes = 19
-vframes = 5
+vframes = 6
 frame = 11
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -290,3 +594,31 @@ libraries = {
 }
 tree_root = SubResource("AnimationNodeStateMachine_uw6ge")
 anim_player = NodePath("../AnimationPlayer")
+
+[node name="efectos" type="Sprite3D" parent="."]
+transform = Transform3D(-5.8755e-06, 1, 0, -1.62307, -3.61999e-06, 0, 0, 0, 1, 0.00831793, 0.119434, 0.0182425)
+visible = false
+modulate = Color(1, 1, 1, 0.443137)
+texture_filter = 2
+texture = ExtResource("2_ebsw5")
+hframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="efectos"]
+libraries = {
+"": SubResource("AnimationLibrary_nb3wo")
+}
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.230429, 0.220412, 1.27101)
+
+[node name="Interfaz" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Interfaz"]
+
+[node name="Fps" type="Label" parent="Interfaz/CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
