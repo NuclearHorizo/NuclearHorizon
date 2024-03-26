@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b0vhbe3r6jawe"]
+
+[ext_resource type="Texture2D" uid="uid://bn468nhasrx7t" path="res://Recursos/texturas/10539-normal.jpg" id="1_egj7a"]
+
+[resource]
+albedo_color = Color(0.486275, 0.12549, 0, 1)
+normal_enabled = true
+normal_scale = 5.85
+normal_texture = ExtResource("1_egj7a")
+uv1_triplanar = true

@@ -1,6 +1,9 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://cx34f35824dut"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cx34f35824dut"]
+
+[ext_resource type="Texture2D" uid="uid://hdv5plkpoega" path="res://Recursos/texturas/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0yMS13b29kLWFlLTUyLWYuanBn.webp" id="1_c7wf8"]
 
 [resource]
+albedo_texture = ExtResource("1_c7wf8")
 metallic_specular = 0.0
 uv1_triplanar = true
 grow_amount = -0.376

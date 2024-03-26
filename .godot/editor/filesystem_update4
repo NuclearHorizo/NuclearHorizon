@@ -1,10 +1,22 @@
 res://Escenas/goku.tscn
+res://Setings/kenneyUI-yellow.tres
 res://Recursos/materiales/Cristal.tres
+res://Recursos/materiales/Metal.tres
+res://Recursos/materiales/Madera.tres
 res://Recursos/materiales/Hojas.tres
+res://Recursos/materiales/ladrillos.tres
+res://Setings/kenneyUI-blue.tres
+res://Setings/kenneyUI-red.tres
 res://Escenas/tuto.tscn
 res://Escenas/gogeta.tscn
 res://Escenas/Mundo inicial.tscn
 res://Escenas/Nivel1.tscn
-res://Recursos/materiales/Madera.tres
-res://Recursos/materiales/Metal.tres
-res://Escenas/Lampara.tscn
+res://Escenas/menu_inicio.tscn
+res://Scripts/Main menu.gd
+res://Escenas/Menu_principal.tscn
+res://Recursos/materiales/pasto.tres
+res://Escenas/menu_inicio.gd
+res://hola/WaterVFX.tscn
+res://hola/DepthTextureVS.tres
+res://hola/WaterShader.tres
+res://Escenas/water.tscn

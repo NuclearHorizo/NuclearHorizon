@@ -1,0 +1,257 @@
+[gd_scene load_steps=23 format=3 uid="uid://by47bx8vmm43m"]
+
+[ext_resource type="Script" path="res://Escenas/menu_inicio.gd" id="1_t7n75"]
+[ext_resource type="Script" path="res://Scripts/Main menu.gd" id="1_uw6kf"]
+[ext_resource type="Theme" uid="uid://d0p2n3pqqs5qo" path="res://Setings/kenneyUI-blue.tres" id="2_nkqii"]
+[ext_resource type="Theme" uid="uid://dv6id31fjd3g2" path="res://Setings/kenneyUI-red.tres" id="3_28n7d"]
+[ext_resource type="Theme" uid="uid://cfg64488mk1eg" path="res://Setings/kenneyUI-yellow.tres" id="4_0v5be"]
+[ext_resource type="Texture2D" uid="uid://srpd5qx5ab24" path="res://Recursos/Rec. juego/golden-glowing-light-effects-isolated-on-transparent-background-solar-flare-with-beams-and-spotlight-glow-effect-starburst-with-sparkles-png.webp" id="5_sejjx"]
+[ext_resource type="AudioStream" uid="uid://bxin4d6lqeto5" path="res://Recursos/Sonidos/Musica/y2mate.com - bad piggies drip.mp3" id="6_068no"]
+[ext_resource type="PackedScene" uid="uid://bfncgal1yvpb8" path="res://Escenas/Menu_principal.tscn" id="7_jtnr3"]
+[ext_resource type="Texture2D" uid="uid://qqugsev7c35l" path="res://Recursos/Sprites/Prota/Charactert.png" id="9_rgxyf"]
+[ext_resource type="Texture2D" uid="uid://ljpho7egbik8" path="res://Recursos/Fuentes de texto/speech-bubble-thought-bubble-comic-bubble-transparent-free-free-png.webp" id="10_867eh"]
+[ext_resource type="PackedScene" uid="uid://4yh08b32eb2v" path="res://Escenas/water.tscn" id="11_6u3vq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_86pdc"]
+sky_top_color = Color(0.498039, 0.666667, 0.992157, 1)
+sky_horizon_color = Color(0.638235, 0.710784, 0.769608, 1)
+ground_bottom_color = Color(0.054902, 0.176471, 0.0862745, 1)
+ground_horizon_color = Color(0.638235, 0.710784, 0.769608, 1)
+
+[sub_resource type="Sky" id="Sky_7vul4"]
+sky_material = SubResource("ProceduralSkyMaterial_86pdc")
+
+[sub_resource type="Environment" id="Environment_xiqpv"]
+background_mode = 2
+sky = SubResource("Sky_7vul4")
+tonemap_mode = 2
+ssao_enabled = true
+glow_enabled = true
+
+[sub_resource type="Animation" id="Animation_7vaxs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.98, 3.98)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-283, -203)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_iw705"]
+resource_name = "Titulo"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3.4, 6.6, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(3.98, 3.98), Vector2(4.815, 4.815), Vector2(3.405, 3.405), Vector2(3.98, 3.98)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-32, -162)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.4, 6.6, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.164061, -0.0837758, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wy8tk"]
+_data = {
+"RESET": SubResource("Animation_7vaxs"),
+"Titulo": SubResource("Animation_iw705")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3jts"]
+atlas = ExtResource("9_rgxyf")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bi0cx"]
+atlas = ExtResource("9_rgxyf")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2gll"]
+atlas = ExtResource("9_rgxyf")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8gi7"]
+atlas = ExtResource("9_rgxyf")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sr153"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3jts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bi0cx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2gll")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k8gi7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Menu inicio" type="Node3D"]
+script = ExtResource("1_t7n75")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xiqpv")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.974761, 0.19334, -0.111625, 0.0752749, 0.755355, 0.650978, 0.210177, 0.626146, -0.750844, 0.748426, 2.8641, -8.53371)
+light_energy = 1.97
+shadow_enabled = true
+
+[node name="Main menu" type="Node3D" parent="."]
+transform = Transform3D(0.973857, 0, -0.227161, 0, 1, 0, 0.227161, 0, 0.973857, -0.24218, -0.0293067, 0.266133)
+script = ExtResource("1_uw6kf")
+
+[node name="Camera3D" type="Camera3D" parent="Main menu"]
+transform = Transform3D(0.999981, -4.97347e-06, -0.00616124, 0.000444079, 0.997457, 0.0712698, 0.00614521, -0.0712711, 0.997438, 0.811961, 0.655926, 1.55558)
+fov = 54.2
+
+[node name="Control" type="Control" parent="Main menu"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 512.0
+offset_top = 312.0
+offset_right = 592.0
+offset_bottom = 369.0
+
+[node name="Jugar" type="Button" parent="Main menu/Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -74.0
+offset_top = -24.0
+offset_right = 63.0
+offset_bottom = 15.0
+scale = Vector2(2, 2)
+theme = ExtResource("2_nkqii")
+theme_override_font_sizes/font_size = 34
+text = "Jugar
+
+
+"
+
+[node name="salir" type="Button" parent="Main menu/Control"]
+layout_mode = 0
+offset_left = -60.0
+offset_top = 64.0
+offset_right = 63.0
+offset_bottom = 103.0
+scale = Vector2(2, 2)
+theme = ExtResource("3_28n7d")
+theme_override_font_sizes/font_size = 34
+text = "salir
+"
+
+[node name="Label" type="Label" parent="Main menu/Control"]
+layout_mode = 0
+offset_left = -283.0
+offset_top = -203.0
+offset_right = -100.0
+offset_bottom = -181.0
+scale = Vector2(3.98, 3.98)
+pivot_offset = Vector2(92.7136, 9.29648)
+theme = ExtResource("4_0v5be")
+text = "Nuclear Horizon"
+
+[node name="Golden-glowing-light-effects-isolated-on-transparent-background-solar-flare-with-beams-and-spotlight-glow-effect-starburst-with-sparkles-png" type="Sprite2D" parent="Main menu/Control/Label"]
+modulate = Color(1, 1, 1, 0.439216)
+show_behind_parent = true
+position = Vector2(93.4673, 8.79397)
+scale = Vector2(0.251256, 0.251256)
+texture = ExtResource("5_sejjx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Main menu/Control/Label"]
+libraries = {
+"": SubResource("AnimationLibrary_wy8tk")
+}
+
+[node name="Bajarle el volumen" type="AudioStreamPlayer" parent="Main menu"]
+stream = ExtResource("6_068no")
+volume_db = -12.18
+mix_target = 1
+
+[node name="Menu_principal" parent="." instance=ExtResource("7_jtnr3")]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.936188, 0, 0.351499, 0, 1, 0, -0.351499, 0, 0.936188, -0.283109, 0.443944, 0.764113)
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_sr153")
+
+[node name="Label3D" type="Label3D" parent="AnimatedSprite3D"]
+transform = Transform3D(0.481845, 0, 0.106084, 0, 0.47544, 0, -0.0648654, 0, 0.788032, 0.228049, 0.221796, 0.0372207)
+modulate = Color(0, 0, 0, 1)
+outline_modulate = Color(1, 1, 1, 1)
+text = "Ale arregla 
+esta porqueria"
+
+[node name="Sprite3D" type="Sprite3D" parent="AnimatedSprite3D/Label3D"]
+transform = Transform3D(0.0910145, 0, -0.142499, 0, 0.108144, 0, 0.00749167, 0, 0.647245, 0.00952256, -0.138198, -0.0446036)
+texture = ExtResource("10_867eh")
+
+[node name="Water" parent="." instance=ExtResource("11_6u3vq")]
+transform = Transform3D(0.718, 0, 0, 0, 0.857753, 0, 0, 0, 0.731, 0.00630689, 0.110145, -0.00416851)
+
+[connection signal="pressed" from="Main menu/Control/Jugar" to="Main menu" method="_on_jugar_pressed"]
+[connection signal="pressed" from="Main menu/Control/salir" to="Main menu" method="_on_salir_pressed"]

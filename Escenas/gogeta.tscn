@@ -83,7 +83,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.876347, 1.41446, 1.92358)
 shape = SubResource("BoxShape3D_mar67")
 
 [node name="Label3D" type="Label3D" parent="." index="5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.119985, 2.83096, 0)
+transform = Transform3D(2.155, 0, 0, 0, 2.155, 0, 0, 0, 2.155, -0.119985, 2.83096, 0)
 visible = false
 text = "Pulsa ENTER para hablar!"
 
@@ -121,6 +121,6 @@ offset_bottom = 196.0
 theme_override_font_sizes/font_size = 43
 text = "No"
 
-[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Panel/Button2" to="." method="_on_button_2_pressed"]

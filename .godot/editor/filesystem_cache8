@@ -1,11 +1,9 @@
 7555aeb530264b75188b2fe7cefa125f
-::res://::1711400081
+::res://::1711472996
 dbfz_gogeta_ssb.tscn::PackedScene::2561954544295071386::1710297488::0::1::::<><>::uid://d1rboiocdsox6::::res://Recursos/Sprites/DBFZ_GogetaSSB/DBFZ_GogetaSSB.dae<>uid://g2lu6y5gxpyk::::res://Recursos/Sprites/Misc/6w8tq6.png
-Lampara.glb::PackedScene::8829756666892443330::1711400081::1711400083::1::::<><>::
-Lampara.obj::Mesh::7694488918294737259::1711400041::1711400043::1::::<><>::
-LamparaXd.obj::Mesh::5855610684531963525::1711399734::1711399738::1::::<><>::
+Lampara.glb::PackedScene::8829756666892443330::1711400081::1711400096::1::::<><>::
 README.md::TextFile::-1::1710781968::0::1::::<><>::
-::res://addons/::1710781968
+::res://addons/::1711472987
 ::res://addons/MagicaVoxel_Importer_with_Extensions/::1710781969
 CulledMeshGenerator.gd::GDScript::-1::1710781968::0::1::::<>RefCounted<>::
 Faces.gd::GDScript::-1::1710781968::0::1::::<>RefCounted<>::
@@ -28,40 +26,138 @@ VoxData.gd::GDScript::-1::1710781968::0::1::::<>RefCounted<>::
 VoxLayer.gd::GDScript::-1::1710781968::0::1::::<>RefCounted<>::
 VoxMaterial.gd::GDScript::-1::1710781968::0::1::::<>RefCounted<>::
 VoxNode.gd::GDScript::-1::1710781968::0::1::::<>RefCounted<>::
-::res://Escenas/::1711399690
+::res://Escenas/::1711471630
 cubitos.tscn::PackedScene::109260608757065139::1710782902::0::1::::<><>::
-gogeta.tscn::PackedScene::1239400980644597571::1711398068::0::1::::<><>::uid://ck7udg8mvl2ts::::res://Recursos/Sprites/xd/Gogeta.fbx<>res://Scripts/ash.gd<>uid://g2lu6y5gxpyk::::res://Recursos/Sprites/Misc/6w8tq6.png<>uid://by0b8v4k7qyl1::::res://Recursos/Sprites/Misc/3DS - The Legend of Zelda Majoras Mask 3D - Dialogue Boxes.png
-goku.tscn::PackedScene::2864515862603342833::1711398067::0::1::::<><>::uid://qqugsev7c35l::::res://Recursos/Sprites/Prota/Charactert.png<>uid://2jurlmy8ob7i::::res://Recursos/Sprites/Prota/Efectos .png
-Mundo inicial.tscn::PackedScene::2476001461189191444::1711398068::0::1::::<><>::uid://dyunjlsodh0tm::::res://Recursos/materiales/Cristal.tres<>uid://dktry4xqwkhi2::::res://Recursos/materiales/Metal.tres<>uid://cx34f35824dut::::res://Recursos/materiales/Madera.tres<>uid://bmn8wp4smr5c::::res://Recursos/materiales/Hojas.tres<>uid://ckv6c2e3b8bxk::::res://Recursos/materiales/pasto.tres<>uid://bg2ufmmb0wokf::::res://Escenas/goku.tscn
-Nivel1.tscn::PackedScene::2736231359630972441::1711398068::0::1::::<><>::uid://dyunjlsodh0tm::::res://Recursos/materiales/Cristal.tres<>uid://dktry4xqwkhi2::::res://Recursos/materiales/Metal.tres<>uid://cx34f35824dut::::res://Recursos/materiales/Madera.tres<>uid://bmn8wp4smr5c::::res://Recursos/materiales/Hojas.tres<>uid://bg2ufmmb0wokf::::res://Escenas/goku.tscn
-nose al chile xdddd.tscn::PackedScene::2930883123024111752::1710731564::0::1::::<><>::uid://c7l7sreylp0mv::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/06006F80.png
+gogeta.tscn::PackedScene::1239400980644597571::1711471630::0::1::::<><>::uid://ck7udg8mvl2ts::::res://Recursos/Sprites/xd/Gogeta.fbx<>res://Scripts/ash.gd<>uid://g2lu6y5gxpyk::::res://Recursos/Sprites/Misc/6w8tq6.png<>uid://by0b8v4k7qyl1::::res://Recursos/Sprites/Misc/3DS - The Legend of Zelda Majoras Mask 3D - Dialogue Boxes.png
+goku.tscn::PackedScene::2864515862603342833::1711471629::0::1::::<><>::uid://qqugsev7c35l::::res://Recursos/Sprites/Prota/Charactert.png<>uid://2jurlmy8ob7i::::res://Recursos/Sprites/Prota/Efectos .png<>uid://cfg64488mk1eg::::res://Setings/kenneyUI-yellow.tres
+Interfaz.gd::GDScript::-1::1711433696::0::1::::<>Control<>::
+Lampara.tscn::PackedScene::3714445514572211412::1711402061::0::1::::<><>::uid://cx34f35824dut::::res://Recursos/materiales/Madera.tres<>uid://dktry4xqwkhi2::::res://Recursos/materiales/Metal.tres
+menu_inicio.gd::GDScript::-1::1711471284::0::1::::<>Node3D<>::
+menu_inicio.tscn::PackedScene::4132765875422328632::1711471630::0::1::::<><>::res://Escenas/menu_inicio.gd<>res://Scripts/Main menu.gd<>uid://d0p2n3pqqs5qo::::res://Setings/kenneyUI-blue.tres<>uid://dv6id31fjd3g2::::res://Setings/kenneyUI-red.tres<>uid://cfg64488mk1eg::::res://Setings/kenneyUI-yellow.tres<>uid://srpd5qx5ab24::::res://Recursos/Rec. juego/golden-glowing-light-effects-isolated-on-transparent-background-solar-flare-with-beams-and-spotlight-glow-effect-starburst-with-sparkles-png.webp<>uid://bxin4d6lqeto5::::res://Recursos/Sonidos/Musica/y2mate.com - bad piggies drip.mp3<>uid://bfncgal1yvpb8::::res://Escenas/Menu_principal.tscn<>uid://qqugsev7c35l::::res://Recursos/Sprites/Prota/Charactert.png<>uid://ljpho7egbik8::::res://Recursos/Fuentes de texto/speech-bubble-thought-bubble-comic-bubble-transparent-free-free-png.webp
+Menu_principal.tscn::PackedScene::2764333979642086823::1711470898::0::1::::<><>::uid://ckv6c2e3b8bxk::::res://Recursos/materiales/pasto.tres<>uid://cx34f35824dut::::res://Recursos/materiales/Madera.tres<>uid://bw004uc60goro::::res://Recursos/Escenarios/Menu_principal_Main menu-4.png<>uid://bmn8wp4smr5c::::res://Recursos/materiales/Hojas.tres
+Mundo inicial.gd::GDScript::-1::1711404480::0::1::::<>Node3D<>::
+Mundo inicial.tscn::PackedScene::2476001461189191444::1711471630::0::1::::<><>::uid://dyunjlsodh0tm::::res://Recursos/materiales/Cristal.tres<>res://Escenas/Mundo inicial.gd<>uid://dktry4xqwkhi2::::res://Recursos/materiales/Metal.tres<>uid://cx34f35824dut::::res://Recursos/materiales/Madera.tres<>uid://bmn8wp4smr5c::::res://Recursos/materiales/Hojas.tres<>uid://ckv6c2e3b8bxk::::res://Recursos/materiales/pasto.tres<>uid://bg2ufmmb0wokf::::res://Escenas/goku.tscn
+Nivel1.tscn::PackedScene::2736231359630972441::1711471630::0::1::::<><>::uid://dyunjlsodh0tm::::res://Recursos/materiales/Cristal.tres<>uid://dktry4xqwkhi2::::res://Recursos/materiales/Metal.tres<>uid://cx34f35824dut::::res://Recursos/materiales/Madera.tres<>uid://b0vhbe3r6jawe::::res://Recursos/materiales/ladrillos.tres<>uid://bmn8wp4smr5c::::res://Recursos/materiales/Hojas.tres<>uid://bg2ufmmb0wokf::::res://Escenas/goku.tscn<>uid://bs6km0os1ocsy::::res://Escenas/Lampara.tscn
+nose al chile xdddd.tscn::PackedScene::2930883123024111752::1711408219::0::1::::<><>::uid://c7l7sreylp0mv::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/06006F80.png
 prueba.tscn::PackedScene::5036299573013023908::1710795969::0::1::::<><>::res://Scripts/prueba.gd<>uid://dyet5sw4w18wu::::res://ya_no_xd.tscn<>uid://bg2ufmmb0wokf::::res://Escenas/goku.tscn
 Sala inicio.tscn::PackedScene::3790930672702247180::1710782902::0::1::::<><>::uid://c01neebeqiuhp::::res://Recursos/Escenarios/cubitos.tres<>uid://bg2ufmmb0wokf::::res://Escenas/goku.tscn
-tuto.tscn::PackedScene::7883260646357806409::1711398067::0::1::::<><>::uid://bg2ufmmb0wokf::::res://Escenas/goku.tscn<>res://Scripts/tuto.gd<>uid://d0436gboq8pkc::::res://Recursos/Escenarios/Mundo_Principal.obj<>uid://bqmfubmdyrjqf::::res://Recursos/Rec. juego/satara_night_no_lamps_2k.exr<>uid://bjmi1ppcr5qkk::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link.fbx<>uid://c2kwux0h12sqd::::res://Recursos/Sprites/Misc/Flecha xd.png<>uid://rwm0us033wud::::res://Escenas/gogeta.tscn<>uid://dy58dmsmvd40q::::res://Recursos/Sonidos/Musica/Audio de WhatsApp 2024-03-12 a las 19.28.36_1852d570.mp3<>uid://bh00hmwifstki::::res://Escenas/nose al chile xdddd.tscn
-::res://Recursos/::1711398922
-::res://Recursos/Escenarios/::1711167708
+tuto.tscn::PackedScene::7883260646357806409::1711471629::0::1::::<><>::uid://bg2ufmmb0wokf::::res://Escenas/goku.tscn<>res://Scripts/tuto.gd<>uid://d0436gboq8pkc::::res://Recursos/Escenarios/Mundo_Principal.obj<>uid://bqmfubmdyrjqf::::res://Recursos/Rec. juego/satara_night_no_lamps_2k.exr<>uid://bjmi1ppcr5qkk::::res://Recursos/Sprites/Nintendo 64 - The Legend of Zelda Ocarina of Time - Link Adult High Poly/Adult Link.fbx<>uid://c2kwux0h12sqd::::res://Recursos/Sprites/Misc/Flecha xd.png<>uid://rwm0us033wud::::res://Escenas/gogeta.tscn<>uid://dy58dmsmvd40q::::res://Recursos/Sonidos/Musica/Audio de WhatsApp 2024-03-12 a las 19.28.36_1852d570.mp3
+::res://hola/::1711473021
+DepthTextureVS.tres::VisualShader::5800814323996761046::1669929554::0::1::::<><>::
+WaterShader.tres::VisualShader::2487089533752136198::1669929554::0::1::::<><>::
+WaterVFX.tscn::PackedScene::2699989771615631590::1669929554::0::1::::<><>::uid://bbo1abph4arco::::res://WaterShader.tres
+::res://hola/Assets/::1711473021
+Banner.png::CompressedTexture2D::5476189160316563748::1669929554::1711473026::1::::<><>::
+Shader.png::CompressedTexture2D::1073374125394820290::1669929554::1711473026::1::::<><>::
+Water.png::CompressedTexture2D::7141517340628441591::1669929554::1711473026::1::::<><>::
+::res://Recursos/::1711435120
+::res://Recursos/Escenarios/::1711470621
 cubitos.tres::MeshLibrary::6582032955865815373::1710778050::0::1::::<><>::
 Escenario de prueba.obj::Mesh::159525442268354588::1710793083::1710793091::1::::<><>::
 Escenario de prueba.vox::Mesh::6151941916057243149::1710791269::1710792490::1::::<><>::
+Menu_principal.glb::PackedScene::4899105050429104621::1711470583::1711470621::1::::<><>::uid://cy1pyyaei4lgt::::res://Recursos/Escenarios/Menu_principal_Main menu-1.png<>uid://bw004uc60goro::::res://Recursos/Escenarios/Menu_principal_Main menu-4.png
+Menu_principal_Main menu-1.png::CompressedTexture2D::6512002311003736563::1711470607::1711470608::1::::<><>::
+Menu_principal_Main menu-4.png::CompressedTexture2D::3983755455422482344::1711470607::1711470608::1::::<><>::
 Mundo_Principal.obj::Mesh::8975605849650056346::1709603013::1710131967::1::::<><>::
 Nivel1.glb::PackedScene::882514817569019754::1711167673::1711167708::1::::<><>::
-::res://Recursos/Fuentes de texto/::1709515339
-::res://Recursos/materiales/::1711399668
-Cristal.tres::StandardMaterial3D::8885887852728124702::1711399668::0::1::::<><>::
-Hojas.tres::StandardMaterial3D::95810808819518370::1711397449::0::1::::<><>::uid://cj82k01aqlxgs::::res://Recursos/texturas/pixil-frame-0 (5).png
-Madera.tres::StandardMaterial3D::6446758588468903167::1711399668::0::1::::<><>::
-Metal.tres::StandardMaterial3D::7901450272181933495::1711168304::0::1::::<><>::uid://dd75rt1pahhos::::res://Recursos/texturas/metal.jpeg
-pasto.tres::StandardMaterial3D::5519968960549850164::1711167914::0::1::::<><>::uid://byqu07sfamtae::::res://Recursos/texturas/024b1c934760aa858cdc4366c2744621.jpg
-::res://Recursos/Rec. juego/::1711398926
+::res://Recursos/Fuentes de texto/::1711471466
+speech-bubble-thought-bubble-comic-bubble-transparent-free-free-png.webp::CompressedTexture2D::791580720204177405::1711471460::1711471466::1::::<><>::
+::res://Recursos/gui_assets/::1711435121
+faq.txt::TextFile::-1::1711435120::0::1::::<><>::
+fill_tree.gd::GDScript::-1::1711435120::0::1::::<>Tree<>::
+preview.tscn::PackedScene::9177165005204776186::1711435120::0::1::::<><>::uid://4r6b2cnujbph::::res://gui_assets/waste_no_space.theme<>uid://c5b5im6wwhc1t::::res://gui_assets/radio_buttons.tres<>res://gui_assets/fill_tree.gd
+radio_buttons.tres::ButtonGroup::6882407529613862183::1711435120::0::1::::<><>::
+waste_no_space.theme::Theme::2072456321729425969::1711435121::0::1::::<><>::uid://pntlljl77f2n::::res://gui_assets/fonts/Poco.ttf<>uid://bggvl1nc2d0w::::res://gui_assets/styles_boxes/button_disabled.tres<>uid://8qocokwxk22q::::res://gui_assets/styles_boxes/button_focus.tres<>uid://doaf0flqaork4::::res://gui_assets/styles_boxes/button_hover.tres<>uid://b1n4l2i0gdnfn::::res://gui_assets/styles_boxes/button_normal.tres<>uid://1l8dlcu0uomf::::res://gui_assets/styles_boxes/button_pressed.tres<>uid://bdosdasxjpjsf::::res://gui_assets/icons/checked.tres<>uid://cspcqqwssgorh::::res://gui_assets/icons/checked_disabled.tres<>uid://dgkgxlawayqrl::::res://gui_assets/icons/radio_checked.tres<>uid://d0pungualnkx::::res://gui_assets/art/waste_no_space_64x64_gui.png<>res://gui_assets/icons/radio_unchecked.tres<>uid://hq4vexamrsaf::::res://gui_assets/icons/radio_unchecked_disabled.tres<>uid://ybbib23e5y4j::::res://gui_assets/icons/unchecked.tres<>uid://cu7akjimi1g0y::::res://gui_assets/icons/unchecked_disabled.tres<>uid://v2djnnnb102n::::res://gui_assets/icons/switch_checked.tres<>uid://biv8jbt0ncpa4::::res://gui_assets/icons/switch_checked_disabled.tres<>uid://b5eb0m77apynj::::res://gui_assets/icons/switch_unchecked.tres<>res://gui_assets/icons/switch_unchecked_disabled.tres<>uid://dhrbqnshcjk5i::::res://gui_assets/styles_boxes/h_grabber.tres<>uid://b4fm8bh6b6jfy::::res://gui_assets/styles_boxes/h_grabber_highlight.tres<>uid://cq71htd8v5q24::::res://gui_assets/styles_boxes/h_grabber_pressed.tres<>uid://bfy0gr3hk7nwr::::res://gui_assets/styles_boxes/h_scroll_bg.tres<>uid://ev7cojkpss7n::::res://gui_assets/styles_boxes/h_slider_bg.tres<>uid://bmw3ft38mob4u::::res://gui_assets/icons/greater_than.tres<>uid://ct7iog5kim2xn::::res://gui_assets/styles_boxes/item_square_disabled.tres<>uid://8i42om0so486::::res://gui_assets/styles_boxes/item_square_hover.tres<>res://gui_assets/icons/close.tres<>uid://bac2dyvltnylv::::res://gui_assets/styles_boxes/panel_normal.tres<>uid://v05b2htko2tv::::res://gui_assets/icons/radio_checked_disabled.tres<>res://gui_assets/icons/next.tres<>res://gui_assets/icons/prev.tres<>uid://b1rgww3k4183m::::res://gui_assets/icons/h_separator.tres<>uid://dlvutubf1ni6e::::res://gui_assets/styles_boxes/panel_popup.tres<>uid://uikmvny0wlyf::::res://gui_assets/styles_boxes/panel_popup_disabled.tres<>uid://pvg6ux1tujim::::res://gui_assets/styles_boxes/progress_bar_fill.tres<>uid://cylg68wk8qhbg::::res://gui_assets/icons/less_than.tres<>uid://c6xnpowqpm4q5::::res://gui_assets/styles_boxes/tab_selected.tres<>uid://bwv4j1d8qkkb6::::res://gui_assets/styles_boxes/tab_unselected.tres<>res://gui_assets/icons/menu.tres<>uid://b4o4yrbyie3va::::res://gui_assets/styles_boxes/tab_panel.tres<>res://gui_assets/icons/space.tres<>res://gui_assets/icons/tab.tres<>uid://xqfhdqhcievm::::res://gui_assets/styles_boxes/textedit_focus.tres<>uid://dfkw8m1yt2t3x::::res://gui_assets/styles_boxes/textedit_normal.tres<>uid://cfrvpemlawnfs::::res://gui_assets/styles_boxes/textedit_readonly.tres<>uid://bdfhq3m6y48oa::::res://gui_assets/styles_boxes/tooltip_panel.tres<>res://gui_assets/icons/arrow_down.tres<>uid://c6jjo7wv6fesg::::res://gui_assets/icons/spin_box.tres<>uid://bfwckbgied5ud::::res://gui_assets/styles_boxes/tree_focus.tres<>uid://cy4rff1y88ds5::::res://gui_assets/styles_boxes/tree_panel.tres<>uid://vujeegkti872::::res://gui_assets/styles_boxes/tree_selected.tres<>uid://c530rfdl77xsi::::res://gui_assets/styles_boxes/tree_selected_focus.tres<>uid://cb6lxrxtw836n::::res://gui_assets/styles_boxes/v_grabber.tres<>uid://65or08vm3dpq::::res://gui_assets/styles_boxes/v_grabber_highlight.tres<>uid://drqhevq5rsykj::::res://gui_assets/styles_boxes/v_grabber_pressed.tres<>uid://yy7swwocjutf::::res://gui_assets/styles_boxes/v_scroll_bg.tres<>uid://dr6o5u502p3k7::::res://gui_assets/styles_boxes/v_slider_bg.tres
+::res://Recursos/gui_assets/art/::1711435122
+GuiTexture.tres::CompressedTexture2D::1325102668727208543::1711435120::0::1::::<><>::
+IconAtlas.tres::CompressedTexture2D::8744498761449243784::1711435120::0::1::::<><>::
+waste_no_space_64x64_gui.png::CompressedTexture2D::263123138516721015::1711435120::1711435122::1::::<><>::
+::res://Recursos/gui_assets/fonts/::1711435122
+Poco.ttf::FontFile::1080843424172687703::1711435120::1711435121::1::::<><>::
+poco_credits.txt::TextFile::-1::1711435120::0::1::::<><>::
+::res://Recursos/gui_assets/icons/::1711435120
+arrow_down.tres::AtlasTexture::-1::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+arrow_right.tres::AtlasTexture::-1::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+checked.tres::AtlasTexture::2626986795279667957::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+checked_disabled.tres::AtlasTexture::6067357101071136657::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+close.tres::AtlasTexture::-1::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+drop_mark.tres::AtlasTexture::109780921475331160::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+greater_than.tres::AtlasTexture::3275813165419924034::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+h_separator.tres::StyleBoxLine::4246829828785861544::1711435120::0::1::::<><>::
+incr_icon.tres::AtlasTexture::298964636532587430::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+less_than.tres::AtlasTexture::6480503199316629652::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+menu.tres::AtlasTexture::-1::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+next.tres::AtlasTexture::-1::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+prev.tres::AtlasTexture::-1::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+radio_checked.tres::AtlasTexture::7601444844421899917::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+radio_checked_disabled.tres::AtlasTexture::1527399885648376631::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+radio_unchecked.tres::AtlasTexture::-1::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+radio_unchecked_disabled.tres::AtlasTexture::526150489634040533::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+space.tres::AtlasTexture::-1::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+spin_box.tres::AtlasTexture::6967848089729984562::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+switch_checked.tres::AtlasTexture::1529902842360795335::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+switch_checked_disabled.tres::AtlasTexture::2993303181567040793::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+switch_unchecked.tres::AtlasTexture::4500449546859194907::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+switch_unchecked_disabled.tres::AtlasTexture::-1::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+tab.tres::AtlasTexture::-1::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+unchecked.tres::AtlasTexture::1686671723922657075::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+unchecked_disabled.tres::AtlasTexture::6242696671841343698::1711435120::0::1::::<><>::uid://dwt5u8jd1d7fg::::res://gui_assets/art/IconAtlas.tres
+v_separator.tres::StyleBoxTexture::-1::1711435120::0::1::::<><>::uid://d0pungualnkx::::res://gui_assets/art/waste_no_space_64x64_gui.png
+::res://Recursos/gui_assets/styles_boxes/::1711435121
+button_disabled.tres::StyleBoxTexture::82977532307157772::1711435120::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+button_focus.tres::StyleBoxTexture::2350116245412251794::1711435120::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+button_hover.tres::StyleBoxTexture::8142254372160347621::1711435120::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+button_normal.tres::StyleBoxTexture::4239949397240827395::1711435120::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+button_pressed.tres::StyleBoxTexture::1849627689815887493::1711435120::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+h_grabber.tres::StyleBoxTexture::7685768378990909172::1711435120::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+h_grabber_highlight.tres::StyleBoxTexture::4433006637826442766::1711435120::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+h_grabber_pressed.tres::StyleBoxTexture::5963515100200592019::1711435120::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+h_scroll_bg.tres::StyleBoxTexture::2788439544047449521::1711435120::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+h_slider_bg.tres::StyleBoxTexture::326054572448991893::1711435120::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+item_square_disabled.tres::StyleBoxTexture::6173000583645312423::1711435120::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+item_square_hover.tres::StyleBoxTexture::2334556626338286117::1711435120::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+PanelContainerDark.tres::StyleBoxTexture::-1::1711435120::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+PanelContainerLight.tres::StyleBoxTexture::-1::1711435120::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+panel_normal.tres::StyleBoxTexture::2392195448914645155::1711435120::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+panel_popup.tres::StyleBoxTexture::7975940586146687402::1711435120::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+panel_popup_disabled.tres::StyleBoxTexture::1420921618445196513::1711435120::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+progress_bar_fill.tres::StyleBoxTexture::1096605336178404240::1711435120::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+tab_disabled.tres::StyleBoxTexture::7182238674857800104::1711435120::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+tab_panel.tres::StyleBoxTexture::4452602985139910042::1711435120::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+tab_selected.tres::StyleBoxTexture::6996993086383235074::1711435120::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+tab_unselected.tres::StyleBoxTexture::3975705413263112345::1711435120::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+textedit_focus.tres::StyleBoxTexture::1647689715868829350::1711435120::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+textedit_normal.tres::StyleBoxTexture::7532245423411827875::1711435121::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+textedit_readonly.tres::StyleBoxTexture::5160182080283772544::1711435121::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+tooltip_panel.tres::StyleBoxTexture::2607764185662546344::1711435121::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+tree_focus.tres::StyleBoxTexture::2782920566558318587::1711435121::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+tree_panel.tres::StyleBoxTexture::6518281991330783142::1711435121::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+tree_selected.tres::StyleBoxTexture::1515807087432718735::1711435121::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+tree_selected_focus.tres::StyleBoxTexture::6937857804751393512::1711435121::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+v_grabber.tres::StyleBoxTexture::4907735810901788195::1711435121::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+v_grabber_highlight.tres::StyleBoxTexture::2238667246829494682::1711435121::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+v_grabber_pressed.tres::StyleBoxTexture::8385935728209534621::1711435121::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+v_scroll_bg.tres::StyleBoxTexture::1736053591607573251::1711435121::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+v_slider_bg.tres::StyleBoxTexture::8417372813001308460::1711435121::0::1::::<><>::uid://s45in7acrvv0::::res://gui_assets/art/GuiTexture.tres
+::res://Recursos/materiales/::1711470898
+Cristal.tres::StandardMaterial3D::8885887852728124702::1711467057::0::1::::<><>::
+Hojas.tres::StandardMaterial3D::95810808819518370::1711467057::0::1::::<><>::uid://cj82k01aqlxgs::::res://Recursos/texturas/pixil-frame-0 (5).png
+ladrillos.tres::StandardMaterial3D::4184920766384543432::1711467057::0::1::::<><>::uid://bn468nhasrx7t::::res://Recursos/texturas/10539-normal.jpg
+Madera.tres::StandardMaterial3D::6446758588468903167::1711467057::0::1::::<><>::uid://hdv5plkpoega::::res://Recursos/texturas/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0yMS13b29kLWFlLTUyLWYuanBn.webp
+Metal.tres::StandardMaterial3D::7901450272181933495::1711467057::0::1::::<><>::uid://dd75rt1pahhos::::res://Recursos/texturas/metal.jpeg
+pasto.tres::StandardMaterial3D::5519968960549850164::1711470898::0::1::::<><>::uid://byqu07sfamtae::::res://Recursos/texturas/024b1c934760aa858cdc4366c2744621.jpg
+::res://Recursos/Rec. juego/::1711422705
 April-Tweets-71-1024x576.png::CompressedTexture2D::6746653299144295671::1709590385::1709602370::1::::<><>::
 cielo nuque.jpeg::CompressedTexture2D::8597705741761644159::1709598885::1709598893::1::::<><>::
 descarga.jpeg::CompressedTexture2D::5800258965728854347::1709603733::1709603745::1::::<><>::
+golden-glowing-light-effects-isolated-on-transparent-background-solar-flare-with-beams-and-spotlight-glow-effect-starburst-with-sparkles-png.webp::CompressedTexture2D::1299411321079292663::1711421626::1711421643::1::::<><>::
 images.jpeg::CompressedTexture2D::8845306050250328813::1709590381::1709602389::1::::<><>::
 pngtree-simple-dirt-gray-dust-texture-isolated-on-transparent-background-png-image_7106107.png::CompressedTexture2D::1696348760836284593::1711398913::1711398926::1::::<><>::
 satara_night_no_lamps_2k.exr::CompressedTexture2D::3534554087022327345::1709604952::1709604967::1::::<><>::
-::res://Recursos/Sonidos/::1709515265
-::res://Recursos/Sonidos/Musica/::1710299165
+::res://Recursos/Sonidos/::1711408348
+::res://Recursos/Sonidos/Musica/::1711423135
 Audio de WhatsApp 2024-03-12 a las 19.28.36_1852d570.mp3::AudioStreamMP3::8907735307817003326::1710296918::1710297485::1::::<><>::
+y2mate.com - bad piggies drip.mp3::AudioStreamMP3::4018120424309868166::1711408297::1711423135::1::::<><>::
 ::res://Recursos/Sonidos/SFX/::1709515262
 ::res://Recursos/Sprites/::1710299156
 ::res://Recursos/Sprites/DBFZ_GogetaSSB/::1710294322
@@ -165,12 +261,23 @@ Efectos .png::CompressedTexture2D::1914923473794731212::1710649417::1710649440::
 ::res://Recursos/Sprites/xd/::1710300405
 Gogeta-ef57b79aba2f86cc63505e787cc982b9_NHY_avt_base.png::CompressedTexture2D::6525575274295492846::1710300400::1710300401::1::::<><>::
 Gogeta.fbx::PackedScene::5542009955825881708::1710299140::1710300401::1::::<><>::uid://cy8bjhx5ngf71::::res://Recursos/Sprites/xd/Gogeta-ef57b79aba2f86cc63505e787cc982b9_NHY_avt_base.png
-::res://Recursos/texturas/::1711167914
+::res://Recursos/texturas/::1711403114
 024b1c934760aa858cdc4366c2744621.jpg::CompressedTexture2D::4105243668555141200::1710800614::1711167914::1::::<><>::
+10539-normal.jpg::CompressedTexture2D::3360684457471810199::1711402925::1711402988::1::::<><>::
+Brick wall building texture ver 6.jpg::CompressedTexture2D::1281917957586197212::1711403106::1711403114::1::::<><>::
 czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0yMS13b29kLWFlLTUyLWYuanBn.webp::CompressedTexture2D::498844474711703740::1710800027::1711167914::1::::<><>::
 metal.jpeg::CompressedTexture2D::7437741577193072930::1710800294::1711167914::1::::<><>::
 pixil-frame-0 (5).png::CompressedTexture2D::5474323996026718610::1710805032::1711167914::1::::<><>::
-::res://Scripts/::1710806673
-ash.gd::GDScript::-1::1710806673::0::1::::<>Node3D<>::
-prueba.gd::GDScript::-1::1710786681::0::1::::<>Node3D<>::
-tuto.gd::GDScript::-1::1710299954::0::1::::<>Node3D<>::
+::res://Scripts/::1711467111
+ash.gd::GDScript::-1::1711405766::0::1::::<>Node3D<>::
+Main menu.gd::GDScript::-1::1711467111::0::1::::<>Node3D<>::
+prueba.gd::GDScript::-1::1711431564::0::1::::<>Node3D<>::
+tuto.gd::GDScript::-1::1711436481::0::1::::<>Node3D<>::
+::res://Setings/::1711467058
+kenneyUI-blue.tres::Theme::8946612877041428726::1711467057::0::1::::<><>::uid://cy2x0wn8heq88::::res://Setings/UIpack_vector.svg<>uid://qrt4lhvhjrea::::res://Setings/kenvector_future.ttf
+kenneyUI-green.tres::Theme::1129023501603976875::1711424094::0::1::::<><>::uid://cy2x0wn8heq88::::res://Setings/UIpack_vector.svg<>uid://qrt4lhvhjrea::::res://Setings/kenvector_future.ttf
+kenneyUI-red.tres::Theme::8697716082235756191::1711467058::0::1::::<><>::uid://cy2x0wn8heq88::::res://Setings/UIpack_vector.svg<>uid://qrt4lhvhjrea::::res://Setings/kenvector_future.ttf
+kenneyUI-yellow.tres::Theme::5138107442571253222::1711467057::0::1::::<><>::uid://cy2x0wn8heq88::::res://Setings/UIpack_vector.svg<>uid://qrt4lhvhjrea::::res://Setings/kenvector_future.ttf
+kenneyUI.tres::Theme::-1::1616538132::0::1::::<><>::
+kenvector_future.ttf::FontFile::1159321920447693412::1384550882::1711420395::1::::<><>::
+UIpack_vector.svg::CompressedTexture2D::6514554126844905139::1393255566::1711420395::1::::<><>::

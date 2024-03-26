@@ -1,7 +1,8 @@
-[gd_scene load_steps=42 format=3 uid="uid://bg2ufmmb0wokf"]
+[gd_scene load_steps=43 format=3 uid="uid://bg2ufmmb0wokf"]
 
 [ext_resource type="Texture2D" uid="uid://qqugsev7c35l" path="res://Recursos/Sprites/Prota/Charactert.png" id="1_veywt"]
 [ext_resource type="Texture2D" uid="uid://2jurlmy8ob7i" path="res://Recursos/Sprites/Prota/Efectos .png" id="2_ebsw5"]
+[ext_resource type="Theme" uid="uid://cfg64488mk1eg" path="res://Setings/kenneyUI-yellow.tres" id="3_u5dax"]
 
 [sub_resource type="GDScript" id="GDScript_xrcn3"]
 script/source = "extends CharacterBody3D
@@ -13,14 +14,19 @@ var state_machine
 var agachado = false
 var gravity = ProjectSettings.get_setting(\"physics/3d/default_gravity\")
 var fps
+var camera
+var pausa
 
 func _ready():
 	$AnimationTree.active = true
+	camera = $Camera3D
+	$Interfaz/ColorRect.hide()
+	pausa = false
 	
 func pared():
 	if is_on_wall() && velocity.y < 0:
 		gravity = 3
-		if Input.is_action_just_pressed(\"ui_accept\"):
+		if Input.is_action_just_pressed(\"salto\"):
 			velocity.y = JUMP_VELOCITY
 	else:
 		gravity = 9.8
@@ -49,32 +55,58 @@ func _anim():
 		state_machine.travel(\"pared_dezlis\")
 		$efectos/AnimationPlayer.play(\"tierrita\")
 		$efectos.show()
-		if Input.is_action_pressed(\"ui_right\"):
+		if Input.is_action_pressed(\"move_der\"):
 			$PJ.flip_h = true
 			$efectos.flip_v= true
 			
-		if Input.is_action_pressed(\"ui_left\"):
+		if Input.is_action_pressed(\"move_izq\"):
 			$PJ.flip_h = false
 			$efectos.flip_v= false
 	else:
 		$efectos.hide()
-	if Input.is_action_pressed(\"ui_down\") && velocity.x == 0 && velocity.y == 0:
+	if Input.is_action_pressed(\"abajo\") && velocity.x == 0 && velocity.y == 0:
 		state_machine.travel(\"Agacharse_inicio\")
 	
 func _physics_process(delta):
 	pared()
 	_anim()
+	_pausa()
+	
 	fps = Engine.get_frames_per_second()
 	$Interfaz/CanvasLayer/Fps.text = \"FPS: \"+ str(fps)
-	if not is_on_floor():
-		velocity.y -= gravity * delta
+	if pausa == false:
+		if not is_on_floor():
+			velocity.y -= gravity * delta
 
-	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+		if Input.is_action_just_pressed(\"salto\") and is_on_floor():
+			velocity.y = JUMP_VELOCITY
 
-	dir.x = Input.get_action_strength(\"ui_left\") - Input.get_action_strength(\"ui_right\")
-	velocity.x = dir.x * SPEED
-	move_and_slide()
+		dir.x = Input.get_action_strength(\"move_izq\") - Input.get_action_strength(\"move_der\")
+		velocity.x = dir.x * SPEED
+		move_and_slide()
+	
+	
+func _pausa():
+	
+		if Input.is_action_just_pressed(\"opciones\") && pausa == false:
+			pausa = true
+			get_tree().paused = true
+		elif Input.is_action_just_pressed(\"opciones\") && pausa == true:
+			pausa = false
+			get_tree().paused = false
+			
+		if pausa == true:
+			$Interfaz/ColorRect.show()
+			
+		else:
+			$Interfaz/ColorRect.hide()
+		
+func _on_fullscreen_toggled(toggled_on):
+	if toggled_on == true:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	elif toggled_on == false:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+
 "
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2p20y"]
@@ -562,6 +594,7 @@ _data = {
 }
 
 [node name="Goku" type="CharacterBody3D"]
+process_mode = 3
 collision_layer = 129
 collision_mask = 129
 script = SubResource("GDScript_xrcn3")
@@ -583,11 +616,13 @@ vframes = 6
 frame = 11
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+process_mode = 1
 libraries = {
 "": SubResource("AnimationLibrary_onaq2")
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+process_mode = 1
 active = false
 libraries = {
 "": SubResource("AnimationLibrary_onaq2")
@@ -604,6 +639,7 @@ texture = ExtResource("2_ebsw5")
 hframes = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="efectos"]
+process_mode = 1
 libraries = {
 "": SubResource("AnimationLibrary_nb3wo")
 }
@@ -612,6 +648,8 @@ libraries = {
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.230429, 0.220412, 1.27101)
 
 [node name="Interfaz" type="Control" parent="."]
+process_mode = 3
+show_behind_parent = true
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -622,3 +660,26 @@ offset_bottom = 40.0
 [node name="Fps" type="Label" parent="Interfaz/CanvasLayer"]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="ColorRect" type="ColorRect" parent="Interfaz"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -21.0
+offset_top = -18.0
+offset_right = 144.0
+offset_bottom = 179.0
+scale = Vector2(7.3422, 3.56787)
+color = Color(0, 0, 0, 0.423529)
+
+[node name="Fullscreen" type="CheckButton" parent="Interfaz/ColorRect"]
+layout_mode = 0
+offset_left = 90.0275
+offset_top = 61.1009
+offset_right = 260.028
+offset_bottom = 92.1009
+scale = Vector2(0.27446, 0.890072)
+theme = ExtResource("3_u5dax")
+text = "Fullscreen"
+alignment = 1
+
+[connection signal="toggled" from="Interfaz/ColorRect/Fullscreen" to="." method="_on_fullscreen_toggled"]

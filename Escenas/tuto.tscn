@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dkkyfewkvd0ft"]
+[gd_scene load_steps=17 format=3 uid="uid://dkkyfewkvd0ft"]
 
 [ext_resource type="PackedScene" uid="uid://bg2ufmmb0wokf" path="res://Escenas/goku.tscn" id="1_2gfht"]
 [ext_resource type="Script" path="res://Scripts/tuto.gd" id="1_44glq"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://c2kwux0h12sqd" path="res://Recursos/Sprites/Misc/Flecha xd.png" id="5_iabh6"]
 [ext_resource type="PackedScene" uid="uid://rwm0us033wud" path="res://Escenas/gogeta.tscn" id="7_th52y"]
 [ext_resource type="AudioStream" uid="uid://dy58dmsmvd40q" path="res://Recursos/Sonidos/Musica/Audio de WhatsApp 2024-03-12 a las 19.28.36_1852d570.mp3" id="8_hadkf"]
-[ext_resource type="PackedScene" uid="uid://bh00hmwifstki" path="res://Escenas/nose al chile xdddd.tscn" id="9_0xu18"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0h38e"]
 size = Vector3(0.549805, 4.21179, 7.94585)
@@ -21,12 +20,17 @@ panorama = ExtResource("3_ybcmd")
 
 [sub_resource type="Sky" id="Sky_fiwul"]
 sky_material = SubResource("PanoramaSkyMaterial_ai2l4")
-radiance_size = 0
 
 [sub_resource type="Environment" id="Environment_waq02"]
 background_mode = 2
 background_color = Color(0, 0.607843, 0.862745, 1)
+background_energy_multiplier = 0.83
 sky = SubResource("Sky_fiwul")
+ambient_light_source = 1
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 0.0
+fog_light_color = Color(1, 1, 1, 1)
+fog_sky_affect = 0.0
 
 [sub_resource type="Animation" id="Animation_kf27r"]
 length = 0.001
@@ -144,20 +148,21 @@ spot_range = 3.68449
 spot_angle = 74.09
 
 [node name="Goku" parent="." instance=ExtResource("1_2gfht")]
-transform = Transform3D(-1.5, 0, 2.26494e-07, 0, 1.5, 0, -2.26494e-07, 0, -1.5, 2.28894, 0.727298, -1.48298)
+transform = Transform3D(-1.5, 0, 2.26494e-07, 0, 1.5, 0, -2.26494e-07, 0, -1.5, 6.16632, 0.727298, -1.48298)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_waq02")
 
-[node name="Label3D" type="Label3D" parent="."]
+[node name="oxoo" type="Label3D" parent="."]
 transform = Transform3D(3.28428, 0, 0, 0, 2.47889, 0, 0, 0, 1, 3.59915, 2.33124, 0.800144)
 text = "OXXO"
 
 [node name="Root Scene" parent="." instance=ExtResource("4_3jhpl")]
-transform = Transform3D(0.0607528, 0, -0.0794298, 0, 0.1, 0, 0.0794298, 0, 0.0607528, 4.13458, 0.403076, 0.268174)
+transform = Transform3D(-0.0268029, 0, -0.0963411, 0, 0.1, 0, 0.0963411, 0, -0.0268029, 4.13458, 0.403076, 0.268174)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.958099, 0.0300872, 0.284854, 0.0390063, 0.998909, 0.0256886, -0.283771, 0.0357234, -0.958227, -0.609376, 9.18475, -16.8847)
+light_energy = 0.1
 shadow_enabled = true
 shadow_reverse_cull_face = true
 
@@ -174,22 +179,19 @@ libraries = {
 "": SubResource("AnimationLibrary_d3ya2")
 }
 
-[node name="Label3D" type="Label3D" parent="vainas locas"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.789121, 1.44885, 0)
+[node name="movement" type="Label3D" parent="vainas locas"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.99085, 1.40515, 0)
 text = "D ==> Moverse derecha 
 A ==> Moverse Izquierda 
-Espacio  ==> Saltar"
+Espacio  ==> Saltar
+ESC ==> Opciones"
 
 [node name="Gogeta" parent="vainas locas" instance=ExtResource("7_th52y")]
 transform = Transform3D(-0.478587, 0, 0.144758, 0, 0.5, 0, -0.144758, 0, -0.478587, -14.0963, 0.18146, 0)
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="vainas locas"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.3346, 1.35305, 0)
 stream = ExtResource("8_hadkf")
 attenuation_model = 1
 unit_size = 1.79
 max_db = 0.999
-autoplay = true
-
-[node name="Node3D" parent="." instance=ExtResource("9_0xu18")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.29754, 3.74348, -1.16649)
